@@ -1,10 +1,9 @@
-/*
- * main.cpp
- *
- *  Created on: 07-03-2015
- *      Author: mateusz
- */
+#include <iostream>
 
+using namespace std;
 
+int main() {
+	cout<<"Hello world";
+}
 
 
