@@ -17,7 +17,7 @@ double Timer::diffTimeMs() {
 	}
 	else {
 		std::cerr<<"Przed wywolaniem funkcji diffTimeMs nalezy odczytac czas rozpoczecia i zakonczenia pomiaru \n"
-				<<"(time_stop < time_start)";
+				 <<"(time_stop < time_start)";
 		return 0;
 	}
 }

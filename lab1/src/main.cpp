@@ -1,21 +1,28 @@
 #include <iostream>
 #include "../inc/timer.h"
 #include "../inc/doubleNumbers.h"
-using namespace std;
+#include <math.h>
 
-static int size = 10^9;
+using namespace std;
 
 
 int main() {
-	int test_numbers[] = {10^0, 10^1, 10^2, 10^3, 10^4, 10^5, 10^6, 10^7, 10^8, 10^9, 10^12, 10^15 };
-	unsigned short problem_size = sizeof(test_numbers)/sizeof(int);
-	double results[problem_size];
-	cout<<"problem size:"<<problem_size<<"\n";
+	unsigned int pow_problem_size = 8;
+	unsigned long long int max_tab_size = pow(10, pow_problem_size);
+	unsigned long long test_numbers[pow_problem_size];
+
+	for(unsigned int i=0;i<pow_problem_size;i++) {
+		test_numbers[i] = pow(10, i);
+	}
+
+	double results[pow_problem_size];
+	cout<<"problem size:"<<pow_problem_size<<"\n";
+
 	Timer timer;
-	doubleNumbers numb(size);
+	doubleNumbers numb(max_tab_size);
 	numb.loadRandomNumbers();
 
-	for(unsigned int i=0; i< problem_size; i++) {
+	for(unsigned int i=0; i< pow_problem_size; i++) {
 
 	timer.startTimer();
 	numb.multiplyByTwo(test_numbers[i]);
@@ -25,7 +32,8 @@ int main() {
 
 	}
 
-	for(unsigned int i=0;i<problem_size;i++) {
+	for(unsigned int i=0;i<pow_problem_size;i++) {
 		cout<<i+1<<". "<<results[i]<<"\n";
 	}
+
 }
