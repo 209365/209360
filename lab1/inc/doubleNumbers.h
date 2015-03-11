@@ -3,8 +3,13 @@
 
 class doubleNumbers {
 private:
-	int size = 10^6;
-	long _numbers[size];
+	int _size;
+	long* _numbers;
+public:
+	doubleNumbers();
+	doubleNumbers(int size);
+	void multiplyByTwo(int number);
+	void loadRandomNumbers();
 };
 
 
