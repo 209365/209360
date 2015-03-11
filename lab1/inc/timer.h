@@ -5,8 +5,8 @@
 
 class Timer {
 	private:
-		std::clock_t time_start;
-		std::clock_t time_stop;
+		std::clock_t _time_start;
+		std::clock_t _time_stop;
 	public:
 		Timer();
 		void startTimer();
