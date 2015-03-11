@@ -14,12 +14,12 @@ doubleNumbers::doubleNumbers(int size) {
 }
 
 void doubleNumbers::multiplyByTwo(int number) {
-	for(int i=0;i<number;i++) {
+	for(unsigned int i=0;i<number;i++) {
 		_numbers[i]*=2;
 	}
 }
 void doubleNumbers::loadRandomNumbers() {
-	for(int i=0;i<_size;i++) {
-		_numbers[i] = rand();
+	for(unsigned int i=0;i<_size;i++) {
+		_numbers[i] = rand()%sizeof(long);
 	}
 }

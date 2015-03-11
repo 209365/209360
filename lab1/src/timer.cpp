@@ -12,12 +12,12 @@ void Timer::stopTimer() {
 }
 
 double Timer::diffTimeMs() {
-	if(_time_stop > _time_start) {
-	return (_time_stop - _time_start) / (double)(CLOCKS_PER_SEC / 1000);
+	if((double)_time_stop >= (double)_time_start) {
+	return (_time_stop - _time_start) / (double)(CLOCKS_PER_SEC/1000);
 	}
 	else {
 		std::cerr<<"Przed wywolaniem funkcji diffTimeMs nalezy odczytac czas rozpoczecia i zakonczenia pomiaru \n"
-				<<"(time_stop <= time_start)";
+				<<"(time_stop < time_start)";
 		return 0;
 	}
 }
