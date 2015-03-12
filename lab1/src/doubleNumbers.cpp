@@ -1,3 +1,11 @@
+/**
+*
+\file
+doubleNumbers.cpp
+*
+\brief
+Plik zawierający definicje funkcji klasy doubleNumbers.
+*/
 #include "../inc/doubleNumbers.h"
 #include <stdlib.h>
 #include <time.h>
@@ -21,4 +29,8 @@ void doubleNumbers::loadRandomNumbers() {
 	for(unsigned int i=0;i<_size;i++) {
 		_numbers[i] = rand();;
 	}
+}
+
+doubleNumbers::~doubleNumbers() {
+	delete[] _numbers;
 }
