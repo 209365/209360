@@ -60,7 +60,7 @@ public:
 	 \brief
 	 Metoda wczytująca losowe liczby do tablicy
 	 *
-	 /pre Konieczna do poprawnego działania metody instrukcja srand jest zawarta w konstruktorze.
+	 \pre Konieczna do poprawnego działania metody instrukcja srand jest zawarta w konstruktorze.
 	 */
 	void loadRandomNumbers();
 
