@@ -116,7 +116,7 @@ int main() {
 	*/
 	double results[pow_problem_size];
 
-	for(int i=0;i<pow_problem_size;i++) {
+	for(unsigned int i=0;i<pow_problem_size;i++) {
 		results[i]=0; //zerowanie tablicy
 	}
 
@@ -132,7 +132,7 @@ int main() {
 	doubleNumbers numb(max_tab_size);
 	numb.loadRandomNumbers();
 
-	for(int j=0;j<average;j++) { // dla dokładności wyników obliczana jest średnia wyników
+	for(unsigned int j=0;j<average;j++) { // dla dokładności wyników obliczana jest średnia wyników
 
 	for(unsigned int i=0; i< pow_problem_size; i++) {
 
@@ -145,7 +145,7 @@ int main() {
 		}
 	}
 
-	for(int i=0;i<average;i++) {
+	for(unsigned int i=0;i<average;i++) {
 		results[i]/=average;
 	}
 
