@@ -3,7 +3,7 @@ CC = g++
 CFLAGS = -Wall 
 #-std=c99
 OBJ =\
-	obj/doubleNumbers.o \
+	obj/DoubleNumbers.o \
 	obj/timer.o \
 	obj/main.o
 

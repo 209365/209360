@@ -12,7 +12,7 @@ Plik zawierający sekwencje operacji do mierzenia czasu operacji mnożenia eleme
 *
 \mainpage
 *
-Czas wykonywania algorytmu
+Czas wykonywania algorytmu wykonującego podstawową operacje arytmetyczną.
 *
 Program realizuje mnożenie określonej liczby elementów tablicy przez dwa
 i wyznacza czas tej operacji.
@@ -41,35 +41,44 @@ Mail:
   \end{center}
   \begin{flushleft}
  Przebieg zależności czasu wykonywania programu od ilości danych wejściowych n
- zachowuję się w bardzo dużym przybliżeniu liniowy kształt. Na tej podstawie możemy
+ zachowuję w bardzo dużym przybliżeniu liniowy kształt. Na wykresie odzwierciedla to linia kreskowana,
+ która jest linią trendu. Na tej podstawie możemy
  stwierdzić, że jest to algorytm o złożoności 0(n), co było proste do przewidzenia
- z powodu jednej operacji arytmetycznej w pętli. Mnożenie przez dwa jest szczególnie podstawową
+ z powodu jednej, podstawowej operacji arytmetycznej powtarzanej w pętli n razy. Mnożenie przez dwa jest szczególnie szybką
  operacją dla procesora z powodu możliwości jej optymalizacji za pomocą przesunięcia bitowego
  w lewo. Największy istotny przyrost czasu można zauważyć przy
- liczbie danych wejściowych większych od 1 000 000. Na tej podstawie można stwierdzić, że należy unikać
- tego typu rozwiązań w programach nawet dla problemów o złożoności O(n).
-
- Otrzymane wyniki:
+ liczbie danych wejściowych większych od 1 000 000. Sprawdzanie złożoności algorytmu metodą mierzenia
+ czasu ma podstawową wadę: czas zależy od użytego sprzętu i obiążenia komputera w danym momencie.
+ W związku z tym taki pomiar nie jest obiektytwny w sensie ilościowym.
+ Z drugiej jednak strony metoda ta jest znaczenie prostsza od liczenia podstawowych operacji wykonywanych przez procesor
+ oraz pozwala przewidzieć zachowanie funkcji tempa wzrostu w zależności od ilości danych wejściowych.
+ \newline
+ Dla zwiększenia wiarygodności pomiary zostały wykonane 10 razy i uśrednione.
+ \newline
+ Wyniki otrzymane na moim komputerze:
  \begin{equation}
- 10^{1} :0.0004
+ 10^{0}: 0.0008
 \end{equation}
 \begin{equation}
- 10^{2} :0.0007
+ 10^{1}: 0.0004
  \end{equation}
 \begin{equation}
- 10^{3} :0.003
+ 10^{2}: 0.0007
  \end{equation}
 \begin{equation}
- 10^{4} :0.026
+ 10^{3}: 0.003
  \end{equation}
 \begin{equation}
- 10^{5} :0.255
+ 10^{4}: 0.026
  \end{equation}
 \begin{equation}
- 10^{6} :2.5345
+ 10^{5}: 0.255
  \end{equation}
 \begin{equation}
- 10^{7} :25.4004
+ 10^{6}: 2.5345
+ \end{equation}
+ \begin{equation}
+ 10^{7}: 25.4004
  \end{equation}
  \end{flushleft}
  \endlatexonly
@@ -77,7 +86,7 @@ Mail:
 
 #include <iostream>
 #include "../inc/timer.h"
-#include "../inc/doubleNumbers.h"
+#include "../inc/DoubleNumbers.h"
 #include <math.h>
 
 using namespace std;
@@ -129,7 +138,7 @@ int main() {
 	\brief
 	Obiekt do wykonywania operacji mnożenia tablicy przez 2.
 	*/
-	doubleNumbers numb(max_tab_size);
+	DoubleNumbers numb(max_tab_size);
 	numb.loadRandomNumbers();
 
 	for(unsigned int j=0;j<average;j++) { // dla dokładności wyników obliczana jest średnia wyników

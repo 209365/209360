@@ -16,7 +16,7 @@ Klasa do wykonania testowych obliczeń mnożenia elemetów tablicy przez 2.
 *
 Klasa pozwala na wylosowanie zadanej ilości liczb oraz pomnożenie przez 2 danej części z nich.
 */
-class doubleNumbers {
+class DoubleNumbers {
 private:
 	/**
 	\brief
@@ -35,7 +35,7 @@ public:
 	Konstruktor domyślny ustawiający maksymalną liczbę tablicy na 10^6
 	oraz wczytujacy czas systemowy potrzeby do losowania liczb.
 	*/
-	doubleNumbers();
+	DoubleNumbers();
 
 	/**
 	\brief
@@ -44,7 +44,7 @@ public:
 	*
 	\param size maksymalny rozmiar tablicy
 	*/
-	doubleNumbers(unsigned long long size);
+	DoubleNumbers(unsigned long long size);
 
 	/**
 	\brief
@@ -68,7 +68,7 @@ public:
 	 \brief
 	 Destruktor zwalniający pamięć to tablicy _numbers.
 	 */
-	~doubleNumbers();
+	~DoubleNumbers();
 };
 
 
