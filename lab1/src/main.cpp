@@ -86,82 +86,12 @@ Mail:
 
 #include <iostream>
 #include "../inc/timer.h"
-#include "../inc/DoubleNumbers.h"
 #include <math.h>
 
 using namespace std;
 
 
 int main() {
-	/**
-	\brief
-	liczba określająca z jakiej liczby pomiarów będzie brana średnia
-	*/
-	unsigned int average = 10;
-	/**
-	\brief
-	Wykładnik rozmiaru problemu
-	*/
-	unsigned int pow_problem_size = 8;
-
-	/**
-	\brief
-	Maksymalny rozmiar tablicy do testów
-	*/
-	unsigned long long int max_tab_size = pow(10, pow_problem_size);
-
-	/**
-	\brief
-	Wielkości rozmiarów tablic, dla kórych trzeba zmierzyć czas obliczeń
-	*/
-	unsigned long long test_numbers[pow_problem_size];
-
-	for(unsigned int i=0;i<pow_problem_size;i++) {
-		test_numbers[i] = pow(10, i); // przygotowanie wielkosci tablic do wykonania obliczen testowych
-	}
-	/**
-	\brief
-	Czasy wykonania obliczeń dla danych wielkości tablicy.
-	*/
-	double results[pow_problem_size];
-
-	for(unsigned int i=0;i<pow_problem_size;i++) {
-		results[i]=0; //zerowanie tablicy
-	}
-
-	/**
-	\brief
-	Obiekt do pamiaru różnicy czasu.
-	*/
-	Timer timer;
-	/**
-	\brief
-	Obiekt do wykonywania operacji mnożenia tablicy przez 2.
-	*/
-	DoubleNumbers numb(max_tab_size);
-	numb.loadRandomNumbers();
-
-	for(unsigned int j=0;j<average;j++) { // dla dokładności wyników obliczana jest średnia wyników
-
-	for(unsigned int i=0; i< pow_problem_size; i++) {
-
-	timer.startTimer();
-	numb.multiplyByTwo(test_numbers[i]);
-	timer.stopTimer();
-
-	results[i] += timer.diffTimeMs();
-
-		}
-	}
-
-	for(unsigned int i=0;i<average;i++) {
-		results[i]/=average;
-	}
-
-	cout<<"Sredni czas wykonania operacji dla tablic o rozmiarach 10^(0...7) w ms: \n";
-	for(unsigned int i=0;i<pow_problem_size;i++) {
-		cout<<"10^"<<i<<" :"<<results[i]<<"\n"; // wyświetlenie czasów
-	}
 
 }
 
