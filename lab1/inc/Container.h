@@ -1,7 +1,7 @@
 /**
 *
 \file
-timer.h
+Container.h
 *
 \brief
 Deklaracja klasy Cointainer
@@ -9,7 +9,7 @@ Deklaracja klasy Cointainer
 #ifndef COINTAINER_H_
 #define COINTAINER_H_
 
-#include "../inc/Element.h"
+#include "Element.h"
 /**
 \brief
 Klasa reprezentująca podstawy, abstrakcyjny konterner danych
@@ -20,6 +20,7 @@ listy stanowiąca klase bazową dla listy, stosu i kolejki
 */
 template <class T>
 class Container {
+private:
 	/**
 	\brief
 	Wskaźnik na podstawowy pojemnik na dane typu T

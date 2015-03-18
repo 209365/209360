@@ -1,7 +1,7 @@
 /**
 *
 \file
-timer.h
+Element.h
 *
 \brief
 Deklaracja klasy Element
@@ -88,7 +88,6 @@ public:
 	*/
 	void setNext(const T* next);
 
-	/**
 	/**
 	\brief
 	ustawia poprzedni element listy

@@ -1,5 +1,11 @@
-/*
- * Cointainer.cpp
+/**
+*
+\file
+Container.cpp
+*
+\brief
+Definicje metod klasy Container
+*/
  *
  *  Created on: 17-03-2015
  *      Author: mateusz
@@ -22,6 +28,7 @@ unsigned int Container<T>::size() {
 template <typename T>
 unsigned short Container<T>::isEmpty() {
 
+	return (this->_size<=0);
 }
 
 
