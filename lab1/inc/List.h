@@ -4,27 +4,24 @@
 List.h
 *
 \brief
-Plik zawierający definicje klasy List
+Deklaracja klasy Cointainer
 */
+#ifndef COINTAINER_H_
+#define COINTAINER_H_
 
-
-#ifndef LIST_H_
-#define LIST_H_
-
-#include "Container.h"
 #include "Element.h"
 #include <iostream>
+
 /**
 \brief
-Klasa reprezentująca liste dwukierunkową
+Klasa reprezentująca podstawy konterner danych z którego korzystają inne - Listę
 *
 *
-Klasa reprezentuje implementacje listy dwukierunkowej
-Dziedziczy po abstrakcyjnym kontenerze Container
-Przechowuje dane typu element
+Klasa reprezentująca podstawy kontener - listę. Jest to podstawowa implementacja
+listy stanowiąca klase bazową dla listy, stosu i kolejki
 */
 template <class T>
-class List : public Container<T> {
+class List {
 private:
 	/**
 	\brief
@@ -37,59 +34,93 @@ private:
 	*/
 	Element<T>* _tail;
 
+	/**
+	\brief
+	Rozmiar kontenera
+	*/
+	unsigned int _size;
+
 public:
 	/**
 	\brief
-	Enumerator przekazywany do funckji push w celu określenia, czy umieszczamy elemnt
-	na początku lub na końcu listy [na początku (Front), czy na końcu (Back)]
+	Enumerator przekazywany do funckji push w celu określenia, czy umieszczamy element
+	na początku lub na końcu listy [na początku (Front), czy na końcu (Back), None - domyślne dla kontenera]
 	*/
-	enum Direction {Front, Back};
+	enum Direction {None, Front, Back};
 
 	/**
 	\brief
-	Konstruktor alokujący pamięć na pola klasy
+	Konstruktor zerujący pola klasy i przydzielający pamięć na _head i _tail
 	*/
 	List();
 
 	/**
 	\brief
-	dodaje element na początek lub koniec listy
+	zwraca element z początku(zależy od użytej struktury danych) listy
 	*
-	*\param elem element umieszczany w kontenerze
-	*\param dir enum określający czy umieśnić elemnt na początku (Front), czy na końcu (Back), NULL, kiedy brak
+	* \param dir określa czy zdjąć element z początku (Front), czy z końca (Back) listy, dla kolejki i stosu None
+	*\return element będący na początku/końcu listy
 	*/
-	void push(const Element<T>* elem, Direction dir);
+	Element<T>* pop(Direction dir);
 
 	/**
 	\brief
-	pobiera element z początku lub konica listy
+	dodaje element na początek/koniec(zależy od implementacji) listy
 	*
-	*\param dir enum określający z zwrócić element z początku (Front), czy z konca (Back) listy, NULL, kiedy brak
+	*\param elem element umieszczany na początku/końcu listy
+	*\param dir określa czy włożyć element na początek(Front), na koniec (Back) listy, dla kolejki i stosu None
 	*/
-	Element<T>* pop(Direction dir) const;
+	void push(Element<T>* elem, Direction dir);
 
 	/**
 	\brief
-	*zwalnianie pamięci po elemetach listy
+	zwraca rozmiar użytej struktury danych
 	*
-	*Destruktor zapewniający zwalnianie wszystkich elementów przechowywanych przez liste
+	*\return rozmiar użytej struktury danych
+	*/
+	unsigned int size();
+
+	/**
+	\brief
+	zwraca 1, gdy kontener jest pusty, 0 - gdy jest już jakiś element
+	*
+	*\return zwraca informacje, czy w kontenerze są już jakieś elementy
+	*/
+	unsigned short isEmpty();
+
+	/**
+	\brief
+	*wirtualny destruktor czyszczący liste
+	*
+	*Destruktor usuwawa wszystkie elementy z listy
 	*/
 	virtual ~List();
 };
 
 template <typename T>
-List<T>::List() : Container<T>(){
+List<T>::List() {
+	this->_size = 0;
 	_head = new Element<T>(NULL);
 	_tail = new Element<T>(NULL);
-
 }
 
 template <typename T>
-void List<T>::push(const Element<T>* elem, Direction dir) {
+unsigned int List<T>::size() {
+	return _size;
+}
+
+template <typename T>
+unsigned short List<T>::isEmpty() {
+
+	return (this->_size<=0);
+}
+
+template <typename T>
+void List<T>::push(Element<T>* elem, Direction dir) {
 
 	if(dir == Back) {
 		if(_tail)
-			_tail->_next=elem;
+			_tail->setNext(elem);
 		elem->setNext(NULL);
 		elem->setPrev(_tail);
 		_tail=elem;
@@ -116,7 +147,7 @@ void List<T>::push(const Element<T>* elem, Direction dir) {
 }
 
 template <typename T>
-Element<T>* List<T>::pop(Direction dir) const {
+Element<T>* List<T>::pop(Direction dir) {
 	if(dir == Back) {
 		Element<T>* elem;
 		if(_tail) {
@@ -161,12 +192,11 @@ List<T>::~List() {
     Element<T>* elem;
 	while(_head)
     {
-      elem = _head->next;
+      elem = (Element<T>*)_head->next();
       delete _head;
       _head = elem;
+    }
 }
-}
 
 
-
-#endif /* LIST_H_ */
+#endif /* COINTAINER_H_ */

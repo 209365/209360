@@ -4,7 +4,7 @@
 Element.h
 *
 \brief
-Deklaracja klasy Element
+Deklaracja i definicja klasy Element
 */
 
 #ifndef ELEMENT_H_
