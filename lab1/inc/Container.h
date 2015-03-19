@@ -31,6 +31,7 @@ private:
 	\brief
 	Rozmiar kontenera
 	*/
+protected:
 	unsigned int _size;
 public:
 	/**
@@ -46,16 +47,16 @@ public:
 	* Metoda wirtualna - narzuca interfejs
 	*\return element będący na początku kontenera danych
 	*/
-	virtual Element<T>* pop()=0;
+	virtual Element<T>* pop();
 
 	/**
 	\brief
 	dodaje element na początek(zalęży od implementacji) kontenera
 	*
 	* Metoda wirtualna - narzuca interfejs
-	*\param element umieszczany na początku kontenera
+	*\param elem element umieszczany na początku kontenera
 	*/
-	virtual Element<T>* push()=0;
+	virtual Element<T>* push(Element<T>* elem);
 
 	/**
 	\brief
@@ -79,5 +80,23 @@ public:
 	*/
 	virtual ~Container();
 };
+
+template <typename T>
+Container<T>::Container() {
+	this->_elem = NULL;
+	this->_size = 0;
+}
+
+template <typename T>
+unsigned int Container<T>::size() {
+	return _size;
+}
+
+template <typename T>
+unsigned short Container<T>::isEmpty() {
+
+	return (this->_size<=0);
+}
+
 
 #endif /* COINTAINER_H_ */

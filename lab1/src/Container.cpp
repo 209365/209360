@@ -6,10 +6,7 @@ Container.cpp
 \brief
 Definicje metod klasy Container
 */
- *
- *  Created on: 17-03-2015
- *      Author: mateusz
- */
+/*
 
 #include "../inc/Container.h"
 #include <stddef.h>
@@ -32,4 +29,4 @@ unsigned short Container<T>::isEmpty() {
 }
 
 
-
+*/

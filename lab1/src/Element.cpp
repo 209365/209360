@@ -7,6 +7,7 @@
 
 #include "../inc/Element.h"
 #include <stddef.h>
+/*
 
 template <typename T>
 Element<T>::Element(T* data) {
@@ -55,4 +56,5 @@ Element<T>::~Element() {
 	_prev = NULL;
 	_next = NULL;
 }
+*/
 

@@ -9,6 +9,7 @@ Deklaracja klasy Element
 
 #ifndef ELEMENT_H_
 #define ELEMENT_H_
+#include <stddef.h>
 /**
 \brief
 Klasa reprezentująca abstrakcyjny "pojemnik na dane"
@@ -103,5 +104,54 @@ public:
 	*/
 	~Element();
 };
+
+template <typename T>
+Element<T>::Element(T* data) {
+	this->_data=data;
+	this->_prev=NULL;
+	this->_next=NULL;
+
+}
+
+template <typename T>
+void Element<T>::setData(const T* data) {
+	this->_data=data;
+
+}
+
+template <typename T>
+T* Element<T>::getData() const{
+	return _data;
+
+}
+
+template <typename T>
+T* Element<T>::next() const {
+	return _next;
+}
+
+template <typename T>
+T* Element<T>::prev() const {
+	return _prev;
+}
+
+template <typename T>
+void Element<T>::setNext(const T* next) {
+	this->_next=next;
+}
+
+template <typename T>
+void Element<T>::setPrev(const T* prev) {
+	this->_prev=prev;
+}
+
+template <typename T>
+Element<T>::~Element() {
+	delete _data;
+	_data = NULL;
+	_prev = NULL;
+	_next = NULL;
+}
+
 
 #endif /* ELEMENT_H_ */
