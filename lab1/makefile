@@ -1,14 +1,32 @@
 CC = g++
 #LIBS = -lm
-CFLAGS = -Wall 
-#-std=c99
+CFLAGS = -Wall
 OBJ =\
-	obj/DoubleNumbers.o \
-	obj/timer.o \
-	obj/main.o
+	obj/main.o \
+	obj/Element.o \
+	obj/List.o \
+	obj/Queue.o \
+	obj/Stash.o \
+	obj/Timer.o
 
-all: main
+INC = \
+	inc/Element.h \
+	inc/List.h \
+	inc/Queue.h \
+	inc/Stash.h 
 
+
+all: obj main
+
+
+sam_main:  
+	$(CC) $(CFLAGS) src/main.cpp -o program
+
+start: obj main
+	rm -f *.o obj/*.o; ./program
+
+obj:
+	mkdir obj
 clean:
 	rm -f *.o program obj/*.o
 
@@ -20,3 +38,6 @@ main: $(OBJ)
 
 kopia:
 	rm -f src/*.cpp~ inc/*.cpp~
+
+doxy:
+	cd ../dox;  make

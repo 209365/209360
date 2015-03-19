@@ -20,7 +20,7 @@ Klasa reprezentująca podstawy konterner danych kolejke
 Kolejka jest strukturą danych typu typu FIFO, First In, First Out; pierwszy na wejściu, pierwszy na wyjściu
 */
 template <class T>
-class Queue : List{
+class Queue : List<T>{
 public:
 	/**
 	\brief
@@ -47,12 +47,12 @@ public:
 	\brief
 	Wywołuje destruktor klasy bazowej
 	*/
-	virtual ~Queue();
+	virtual ~Queue(){};
 };
 
 
 template <typename T>
-Queue<T>::Queue() :List(){}
+Queue<T>::Queue() :List<T>(){}
 
 template <typename T>
 Element<T>* Queue<T>::pop() {

@@ -46,8 +46,7 @@ public:
 	Enumerator przekazywany do funckji push w celu określenia, czy umieszczamy element
 	na początku lub na końcu listy [na początku (Front), czy na końcu (Back), None - domyślne dla kontenera]
 	*/
-	enum Direction {None, Front, Back};
-
+	enum Direction {Front, Back};
 	/**
 	\brief
 	Konstruktor zerujący pola klasy i przydzielający pamięć na _head i _tail
@@ -58,7 +57,7 @@ public:
 	\brief
 	zwraca element z początku(zależy od użytej struktury danych) listy
 	*
-	* \param dir określa czy zdjąć element z początku (Front), czy z końca (Back) listy, dla kolejki i stosu None
+	* \param dir określa czy zdjąć element z początku (Front), czy z końca (Back) listy
 	*\return element będący na początku/końcu listy
 	*/
 	Element<T>* pop(Direction dir);
@@ -68,7 +67,7 @@ public:
 	dodaje element na początek/koniec(zależy od implementacji) listy
 	*
 	*\param elem element umieszczany na początku/końcu listy
-	*\param dir określa czy włożyć element na początek(Front), na koniec (Back) listy, dla kolejki i stosu None
+	*\param dir określa czy włożyć element na początek(Front), na koniec (Back) listy
 	*/
 	void push(Element<T>* elem, Direction dir);
 

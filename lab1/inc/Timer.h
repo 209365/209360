@@ -1,10 +1,10 @@
 /**
 *
 \file
-timer.h
+Timer.h
 *
 \brief
-Plik zawierający deklaracje klasy timer służącej do pomiaru różnicy czasów.
+Plik zawierający deklaracje klasy Timer służącej do pomiaru różnicy czasów.
 */
 
 #ifndef TIMER_H_

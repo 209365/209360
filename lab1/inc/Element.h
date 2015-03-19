@@ -30,12 +30,12 @@ private:
 	\brief
 	Wskaźnik na kolejny element listy
 	*/
-	T* _next;
+	Element<T>* _next;
 	/**
 	\brief
 	Wskaźnik na poprzedni element listy
 	*/
-	T* _prev;
+	Element<T>* _prev;
 public:
 	/**
 	\brief
@@ -71,7 +71,7 @@ public:
 	*
 	*\return wskaźnik do kolejnego elementu na liście
 	*/
-	T* next() const;
+	Element<T>* next() const;
 
 	/**
 	\brief
@@ -79,7 +79,7 @@ public:
 	*
 	*\return wskaźnik do poprzedniego elementu na liście
 	*/
-	T* prev() const;
+	Element<T>* prev() const;
 
 	/**
 	\brief
@@ -87,7 +87,7 @@ public:
 	*
 	*\param next kolejny element listy
 	*/
-	void setNext(const T* next);
+	void setNext(Element<T>* next);
 
 	/**
 	\brief
@@ -95,7 +95,7 @@ public:
 	*
 	*\param prev poprzedni element listy
 	*/
-	void setPrev(const T* prev);
+	void setPrev(Element<T>* prev);
 	/**
 	\brief
 	*zwalnianie elementu przechowywanego przez klase Element
@@ -126,23 +126,23 @@ T* Element<T>::getData() const{
 }
 
 template <typename T>
-T* Element<T>::next() const {
+Element<T>* Element<T>::next() const {
 	return _next;
 }
 
 template <typename T>
-T* Element<T>::prev() const {
+Element<T>* Element<T>::prev() const {
 	return _prev;
 }
 
 template <typename T>
-void Element<T>::setNext(const T* next) {
-	this->_next=next;
+void Element<T>::setNext(Element<T>* next) {
+	_next=next;
 }
 
 template <typename T>
-void Element<T>::setPrev(const T* prev) {
-	this->_prev=prev;
+void Element<T>::setPrev(Element<T>* prev) {
+	_prev=prev;
 }
 
 template <typename T>

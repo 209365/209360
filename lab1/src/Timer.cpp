@@ -1,13 +1,13 @@
 /**
 *
 \file
-timer.cpp
+Timer.cpp
 *
 \brief
-Plik zawierający definicje funkcji klasy timer służącej do pomiaru różnicy czasów.
+Plik zawierający definicje funkcji klasy Timer służącej do pomiaru różnicy czasów.
 */
 
-#include "../inc/timer.h"
+#include "../inc/Timer.h"
 #include <iostream>
 
 Timer::Timer(): _time_start(0), _time_stop(0) {}

@@ -19,7 +19,7 @@ Klasa reprezentująca podstawy konterner danych - stos
 Kolejka jest strukturą danych typu typu LIFO, Last In, First Out; ostatni na wejściu, pierwszy na wyjściu
 */
 template <class T>
-class Stash : List{
+class Stash : List<T>{
 public:
 	/**
 	\brief
@@ -47,11 +47,11 @@ public:
 	\brief
 	Wywołuje destruktor klasy bazowej
 	*/
-	virtual ~Stash();
+	virtual ~Stash(){};
 };
 
 template <typename T>
-Stash<T>::Stash() :List(){}
+Stash<T>::Stash() :List<T>(){}
 
 template <typename T>
 Element<T>* Stash<T>::pop() {
