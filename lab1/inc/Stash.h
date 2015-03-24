@@ -63,5 +63,6 @@ template <typename T>
 void Stash<T>::push(Element<T>* elem) {
 	List<T>::push(elem,List<T>::Front);
 }
+/*test*/
 
 #endif /* STASH_H_ */

@@ -152,6 +152,7 @@ Element<T>::~Element() {
 	_prev = NULL;
 	_next = NULL;
 }
+/*test*/
 
 
 #endif /* ELEMENT_H_ */

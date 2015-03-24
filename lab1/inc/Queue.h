@@ -66,6 +66,7 @@ void Queue<T>::push(Element<T>* elem) {
 
 }
 
+/*test*/
 
 
 #endif /* QUEUE_H_ */
