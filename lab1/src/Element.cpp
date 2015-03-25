@@ -1,9 +1,9 @@
 /**
 *
 \file
-Queue.cpp
+Element.cpp
 *
 \brief
-Definicja klasy Queue
+Definicja klasy Element
 */
 #include "../inc/Element.h"
