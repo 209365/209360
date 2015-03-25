@@ -94,7 +94,7 @@ Stos:
 #include "../inc/Timer.h"
 #include "../inc/List.h"
 #include "../inc/Queue.h"
-#include "../inc/Stash.h"
+#include "../inc/Stack.h"
 #include "../inc/Element.h"
 #include <math.h>
 
@@ -129,7 +129,7 @@ int main() {
 	\brief
 	* reprezentacja (obiekt) stosu przechowujący int'y
 	*/
-	Stash<int>* stash = new Stash<int>();
+	Stack<int>* stack = new Stack<int>();
 
 	/**
 	\brief
@@ -147,7 +147,7 @@ int main() {
 	\brief
 	* wyniki pomiarów czasu dla stosu
 	*/
-	double stash_resoults[n_size];
+	double stack_resoults[n_size];
 
 	/**
 	\brief
@@ -173,10 +173,10 @@ int main() {
 
 			timer.startTimer();
 			for(int k=0;k<pow(10,n[j]);k++) {
-				stash->push(new Element<int>(new int));
+				stack->push(new Element<int>(new int));
 			}
 			timer.stopTimer();
-			stash_resoults[j]=timer.diffTimeMs();
+			stack_resoults[j]=timer.diffTimeMs();
 
 		}
 
@@ -193,7 +193,7 @@ int main() {
 		cout<<"\n";
 		cout<<"Stos: \n";
 		for(int i=0;i<n_size;i++) {
-			cout<<"10^"<<n[i]<<": "<<stash_resoults[i]<<" ms \n";
+			cout<<"10^"<<n[i]<<": "<<stack_resoults[i]<<" ms \n";
 		}
 
 
