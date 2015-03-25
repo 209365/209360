@@ -6,4 +6,4 @@ Stash.cpp
 \brief
 Definicja klasy Stash
 */
-#include "../inc/Stash.h"
+#include "../../inc/LinkedList/Stash.h"

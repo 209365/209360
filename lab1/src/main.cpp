@@ -92,10 +92,10 @@ Stos:
 
 #include <iostream>
 #include "../inc/Timer.h"
-#include "../inc/List.h"
-#include "../inc/Queue.h"
-#include "../inc/Stash.h"
-#include "../inc/Element.h"
+#include "../inc/LinkedList/List.h"
+#include "../inc/LinkedList/Queue.h"
+#include "../inc/LinkedList/Stash.h"
+#include "../inc/LinkedList/Element.h"
 #include <math.h>
 
 using namespace std;

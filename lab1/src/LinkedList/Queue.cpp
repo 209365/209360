@@ -6,4 +6,4 @@ Queue.cpp
 \brief
 Definicja klasy Queue
 */
-#include "../inc/Queue.h"
+#include "../../inc/LinkedList/Queue.h"
