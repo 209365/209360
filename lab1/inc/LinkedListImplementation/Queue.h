@@ -12,6 +12,7 @@ Deklaracja i definicja klasy Queue
 
 #include "List.h"
 
+namespace ListImplementation {
 /**
 \brief
 Klasa reprezentująca podstawy konterner danych kolejke
@@ -50,23 +51,7 @@ public:
 	virtual ~Queue(){};
 };
 
-
-template <typename T>
-Queue<T>::Queue() :List<T>(){}
-
-template <typename T>
-Element<T>* Queue<T>::pop() {
-	return List<T>::pop(List<T>::Front);
-
 }
-
-template <typename T>
-void Queue<T>::push(Element<T>* elem) {
-	List<T>::push(elem,List<T>::Back);
-
-}
-
-/*test*/
 
 
 #endif /* QUEUE_H_ */

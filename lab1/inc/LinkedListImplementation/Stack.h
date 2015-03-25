@@ -11,6 +11,8 @@ Deklaracja i definicja klasy Stack
 #define Stack_H_
 
 #include "List.h"
+
+namespace ListImplementation {
 /**
 \brief
 Klasa reprezentująca podstawy konterner danych - stos
@@ -50,19 +52,7 @@ public:
 	virtual ~Stack(){};
 };
 
-template <typename T>
-Stack<T>::Stack() :List<T>(){}
-
-template <typename T>
-Element<T>* Stack<T>::pop() {
-	return List<T>::pop(List<T>::Front);
-
 }
 
-template <typename T>
-void Stack<T>::push(Element<T>* elem) {
-	List<T>::push(elem,List<T>::Front);
-}
-/*test*/
 
 #endif /* Stack_H_ */
