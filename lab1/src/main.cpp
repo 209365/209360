@@ -95,7 +95,7 @@ Stos:
 #include "../inc/LinkedList/List.h"
 #include "../inc/LinkedList/Queue.h"
 #include "../inc/LinkedList/Stash.h"
-#include "../inc/LinkedList/Element.h"
+#include "../inc/Element.h"
 #include <math.h>
 
 using namespace std;

@@ -4,12 +4,12 @@
 List.h
 *
 \brief
-Deklaracja klasy Cointainer
+Deklaracja klasy List
 */
 #ifndef COINTAINER_H_
 #define COINTAINER_H_
 
-#include "Element.h"
+#include "../Element.h"
 #include <iostream>
 
 /**
