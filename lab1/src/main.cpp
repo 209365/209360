@@ -94,7 +94,7 @@ Stos:
 #include "../inc/Timer.h"
 #include "../inc/LinkedList/List.h"
 #include "../inc/LinkedList/Queue.h"
-#include "../inc/LinkedList/Stash.h"
+#include "../inc/LinkedList/Stack.h"
 #include "../inc/Element.h"
 #include <math.h>
 
@@ -129,7 +129,7 @@ int main() {
 	\brief
 	* reprezentacja (obiekt) stosu przechowujący int'y
 	*/
-	Stash<int>* stash = new Stash<int>();
+	Stack<int>* stack = new Stack<int>();
 
 	/**
 	\brief
@@ -173,7 +173,7 @@ int main() {
 
 			timer.startTimer();
 			for(int k=0;k<pow(10,n[j]);k++) {
-				stash->push(new Element<int>(new int));
+				stack->push(new Element<int>(new int));
 			}
 			timer.stopTimer();
 			stash_resoults[j]=timer.diffTimeMs();

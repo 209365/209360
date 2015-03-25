@@ -31,7 +31,7 @@ private:
 	\brief
 	Wskaźnik tablicy przechowującej elementy zawarte w liście
 	*/
-	Element* _elements;
+	Element<T>* _elements;
 	/**
 	\brief
 	Aktualna liczba elementów w liście
@@ -52,7 +52,7 @@ public:
 	w ilości określonej przez parametr max_size
 	\param max_size maksymalna liczba elementów w liście
 	*/
-	List<T>::List(unsigned int max_size);
+	List(unsigned int max_size);
 
 	/**
 	\brief
@@ -97,18 +97,18 @@ public:
 	virtual ~List();
 };
 template <typename T>
-static unsigned int List<T>::_MAX_SIZE=1000000;
+unsigned int List<T>::_MAX_SIZE=1000000;
 
 template <typename T>
 List<T>::List() {
-	_elements = new Element[_MAX_SIZE];
+	_elements = new Element<T>[_MAX_SIZE];
 	_numElements=0;
 
 }
 template <typename T>
 List<T>::List(unsigned int max_size) {
 	List<T>::_MAX_SIZE=max_size;
-	_elements = new Element[_MAX_SIZE];
+	_elements = new Element<T>[_MAX_SIZE];
 	_numElements=0;
 
 }

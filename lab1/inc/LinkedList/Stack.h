@@ -1,14 +1,14 @@
 /**
 *
 \file
-Stash.h
+Stack.h
 *
 \brief
-Deklaracja i definicja klasy Stash
+Deklaracja i definicja klasy Stack
 */
 
-#ifndef STASH_H_
-#define STASH_H_
+#ifndef Stack_H_
+#define Stack_H_
 
 #include "List.h"
 /**
@@ -19,13 +19,13 @@ Klasa reprezentująca podstawy konterner danych - stos
 Kolejka jest strukturą danych typu typu LIFO, Last In, First Out; ostatni na wejściu, pierwszy na wyjściu
 */
 template <class T>
-class Stash : List<T>{
+class Stack : List<T>{
 public:
 	/**
 	\brief
 	Konstruktor wywołujący konstruktor klasy bazowej List
 	*/
-	Stash();
+	Stack();
 
 	/**
 	\brief
@@ -47,22 +47,22 @@ public:
 	\brief
 	Wywołuje destruktor klasy bazowej
 	*/
-	virtual ~Stash(){};
+	virtual ~Stack(){};
 };
 
 template <typename T>
-Stash<T>::Stash() :List<T>(){}
+Stack<T>::Stack() :List<T>(){}
 
 template <typename T>
-Element<T>* Stash<T>::pop() {
+Element<T>* Stack<T>::pop() {
 	return List<T>::pop(List<T>::Front);
 
 }
 
 template <typename T>
-void Stash<T>::push(Element<T>* elem) {
+void Stack<T>::push(Element<T>* elem) {
 	List<T>::push(elem,List<T>::Front);
 }
 /*test*/
 
-#endif /* STASH_H_ */
+#endif /* Stack_H_ */
