@@ -42,6 +42,13 @@ private:
 public:
 	/**
 	\brief
+	Enumerator określający sposób powiększania się kolejki. Określa czy po zapełnieniu kolejki
+	jej wielkość powinna zwiększyć się dwukrotnie, czy +1.
+	*/
+	enum Increase {Plus_1, Double};
+
+	/**
+	\brief
 	Konstruktor alokujący pamięć na kolejkę oraz zerujący indeks elementu na końcu kolejki
 	*/
 	Queue();
@@ -66,8 +73,10 @@ public:
 	dodaje element na koniec kolejki
 	*
 	*\param elem element umieszczany na końcu kolejki
+	*\param inc określa sposób powiększania się kolejki w razie braku miejsca
 	*/
-	void push(Element<T>* elem);
+	void push(Element<T>* elem, Increase inc);
+
 	/**
 	\brief
 	Destruktor usuwa tablicę przechowującą elementy kolejki

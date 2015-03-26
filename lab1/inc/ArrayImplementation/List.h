@@ -42,6 +42,13 @@ private:
 public:
 	/**
 	\brief
+	Enumerator określający sposób powiększania się listy. Określa czy po zapełnieniu listy
+	jej wielkość powinna zwiększyć się dwukrotnie, czy +1.
+	*/
+	enum Increase {Plus_1, Double};
+
+	/**
+	\brief
 	Konstruktor zerujący aktualny rozmiar i przydzielający pamięć tablicy przechowującej dane
 	w ilości _MAX_SIZE
 	*/
@@ -70,8 +77,10 @@ public:
 	*\pre Indeksowanie zaczyna się od 1
 	*\param elem element umieszczany do listy
 	*\param index określa pozycję na liście dodawanego elementu (numeracja od 1!)
+	*\param inc określa sposób powiększania się listy w razie braku miejsca
+	*\return zwraca -1 gdy operacja się niepowiodła
 	*/
-	int push(Element<T>* elem, unsigned int index);
+	int push(Element<T>* elem, unsigned int index, Increase inc);
 
 	/**
 	\brief

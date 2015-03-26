@@ -34,13 +34,32 @@ Element<T>* ArrayImplementation::Stack<T>::pop() {
 }
 
 template <typename T>
-void ArrayImplementation::Stack<T>::push(Element<T>* elem) {
+void ArrayImplementation::Stack<T>::push(Element<T>* elem, Increase inc) {
 	if(_top>=_MAX_SIZE) {
+		if(inc == Plus_1) {
+				_MAX_SIZE++;
+				Element<T>* temp = new Element<T>[_MAX_SIZE];
+				for(int i=0;i<_top;i++) {
+					temp[i]=_elements[i];
+				}
+				delete[] _elements;
+				_elements=temp;
+				std::cerr<<"Stos powiększony o 1 \n";
+
+				}
+
+			if(inc == Double) {
+				_MAX_SIZE*=2;
+				Element<T>* temp = new Element<T>[_MAX_SIZE];
+				for(int i=0;i<_top;i++) {
+					temp[i]=_elements[i];
+				}
+				delete[] _elements;
+				_elements=temp;
+				std::cerr<<"Stos powiększony dwukrotnie \n";
+			}
+	}
 	_elements[++_top]=elem;
-	}
-	else {
-		std::cerr<<"Za mala tablica na dodanie kolejnego elementu do stosu";
-	}
 }
 
 template <typename T>

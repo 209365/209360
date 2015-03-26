@@ -42,6 +42,12 @@ private:
 public:
 	/**
 	\brief
+	Enumerator określający sposób powiększania się stosu. Określa czy po zapełnieniu stosu
+	jej wielkość powinna zwiększyć się dwukrotnie, czy +1.
+	*/
+	enum Increase {Plus_1, Double};
+	/**
+	\brief
 	Konstruktor przydzielający pamieć na stos w ilości _MAX_SIZE oraz zerujący szczyt stosu
 	*/
 	Stack();
@@ -65,8 +71,9 @@ public:
 	dodaje element na wierzch
 	*
 	*\param elem element, który zostanie umieszczony na wierzchu stosu
+	*\param inc określa sposób powiększania się stosu w razie braku miejsca
 	*/
-	void push(Element<T>* elem);
+	void push(Element<T>* elem, Increase inc);
 
 	/**
 	\brief

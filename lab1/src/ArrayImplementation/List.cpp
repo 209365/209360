@@ -37,13 +37,32 @@ unsigned short ArrayImplementation::List<T>::isEmpty() {
 }
 
 template <typename T>
-int ArrayImplementation::List<T>::push(Element<T>* elem, unsigned int index) {
+int ArrayImplementation::List<T>::push(Element<T>* elem, unsigned int index, Increase inc) {
 	if(_numElements>=_MAX_SIZE) {
-		std::cerr<<"Brak pamieci dla kolejnych elementow listy";
-		return -1;
+		if(inc == Plus_1) {
+			_MAX_SIZE++;
+			Element<T>* temp = new Element<T>[_MAX_SIZE];
+			for(int i=0;i<_numElements;i++) {
+				temp[i]=_elements[i];
+			}
+			delete[] _elements;
+			_elements=temp;
+			std::cerr<<"Lista powiększona o 1 \n";
+		}
+		if(inc == Double) {
+			_MAX_SIZE*=2;
+			Element<T>* temp = new Element<T>[_MAX_SIZE];
+			for(int i=0;i<_numElements;i++) {
+				temp[i]=_elements[i];
+			}
+			delete[] _elements;
+			_elements=temp;
+			std::cerr<<"Lista powiększona dwukrotnie \n";
+		}
 	}
 	if((index<1) && (index>_numElements)) {
 		std::cerr<<"Nieprawidlowy indeks dodawanego elementy do listy";
+		return -1;
 	}
 
 	for (int pos = _numElements; pos >= index; pos--) {
