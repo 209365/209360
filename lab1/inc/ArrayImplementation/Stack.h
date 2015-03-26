@@ -7,8 +7,8 @@ Stack.h
 Deklaracja i definicja klasy Stack w wersji tablicowej
 */
 
-#ifndef Stack_H_
-#define Stack_H_
+#ifndef ARRAY_STACK_H_
+#define ARRAY_STACK_H_
 #define DEFAULT_MAX_SIZE 1000
 #include "List.h"
 #include "../Element.h"
@@ -101,4 +101,4 @@ public:
 }
 
 
-#endif /* Stack_H_ */
+#endif /* ARRAY_STACK_H_ */

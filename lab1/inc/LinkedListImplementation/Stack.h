@@ -7,8 +7,8 @@ Stack.h
 Deklaracja i definicja klasy Stack
 */
 
-#ifndef Stack_H_
-#define Stack_H_
+#ifndef LIST_STACK_H_
+#define LIST_STACK_H_
 
 #include "List.h"
 
@@ -55,4 +55,4 @@ public:
 }
 
 
-#endif /* Stack_H_ */
+#endif /* LIST_STACK_H_*/

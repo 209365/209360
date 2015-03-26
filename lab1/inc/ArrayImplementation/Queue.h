@@ -7,8 +7,8 @@ Queue.h
 Deklaracja i definicja klasy Queue
 */
 
-#ifndef QUEUE_H_
-#define QUEUE_H_
+#ifndef ARRAY_QUEUE_H_
+#define ARRAY_QUEUE_H_
 #define DEFAULT_MAX_SIZE 1000
 #include "../Element.h"
 
@@ -86,4 +86,4 @@ public:
 
 }
 
-#endif /* QUEUE_H_ */
+#endif /* ARRAY_QUEUE_H_ */

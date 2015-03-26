@@ -6,8 +6,8 @@ List.h
 \brief
 Deklaracja klasy Lista (w implementacji opartej na tablicy)
 */
-#ifndef COINTAINER_H_
-#define COINTAINER_H_
+#ifndef ARRAY_LIST_H_
+#define ARRAY_LIST_H_
 #define DEFAULT_MAX_SIZE 1000
 #include "../Element.h"
 #include <iostream>
@@ -110,4 +110,4 @@ public:
 }
 
 
-#endif /* COINTAINER_H_ */
+#endif /* ARRAY_LIST_H_*/

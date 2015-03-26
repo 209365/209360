@@ -7,7 +7,8 @@
 
 #include "../inc/Benchmark.h"
 
-Benchmark::Benchmark() {
+template <class T>
+Benchmark<T>::Benchmark() {
 	// TODO Auto-generated constructor stub
 
 }

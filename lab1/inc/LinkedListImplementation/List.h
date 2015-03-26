@@ -6,8 +6,8 @@ List.h
 \brief
 Deklaracja klasy List
 */
-#ifndef COINTAINER_H_
-#define COINTAINER_H_
+#ifndef LINKED_LIST_H_
+#define LINKED_LIST_H_
 
 #include "../Element.h"
 #include <iostream>
@@ -99,4 +99,4 @@ public:
 
 }
 
-#endif /* COINTAINER_H_ */
+#endif /* LINKED_LIST */

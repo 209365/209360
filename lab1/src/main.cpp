@@ -40,111 +40,20 @@ Mail:
 */
 
 #include <iostream>
-#include "../inc/Timer.h"
 #include "../inc/LinkedListImplementation/List.h"
 #include "../inc/LinkedListImplementation/Queue.h"
 #include "../inc/LinkedListImplementation/Stack.h"
+
+#include "../inc/ArrayImplementation/List.h"
+#include "../inc/ArrayImplementation/Queue.h"
+#include "../inc/ArrayImplementation/Stack.h"
 #include "../inc/Element.h"
 #include <math.h>
 
 using namespace std;
 
 int main() {
-	/**
-	\brief
-	liczba określająca wykładnik liczby elementów, które umieścimy w danej strukturze danych
-	*/
-	int n[] = {2,3, 6, 7};
-
-	/**
-	\brief
-	ilość testowanych wielkości strukur danych
-	*/
-	int n_size = 4;
-
-	/**
-	\brief
-	* reprezentacja (obiekt) listy przechowujący int'y
-	*/
-	List<int>* list = new List<int>();
-
-	/**
-	\brief
-	* reprezentacja (obiekt) kolejki przechowujący int'y
-	*/
-	Queue<int>* queue = new Queue<int>();
-
-	/**
-	\brief
-	* reprezentacja (obiekt) stosu przechowujący int'y
-	*/
-	Stack<int>* stack = new Stack<int>();
-
-	/**
-	\brief
-	* wyniki pomiarów czasu dla listy
-	*/
-	double list_resoults[n_size];
-
-	/**
-	\brief
-	* wyniki pomiarów czasu dla kolejki
-	*/
-	double queue_resoults[n_size];
-
-	/**
-	\brief
-	* wyniki pomiarów czasu dla stosu
-	*/
-	double stash_resoults[n_size];
-
-	/**
-	\brief
-	* czasomierz użyty do mierzenia czasu wypełniania struktur
-	*/
-	Timer timer;
-
-
-		for(int j=0;j<n_size;j++) {
-			timer.startTimer();
-			for(int k=0;k<pow(10,n[j]);k++) {
-				list->push(new Element<int>(new int), List<int>::Front);
-			}
-			timer.stopTimer();
-			list_resoults[j]=timer.diffTimeMs();
-
-			timer.startTimer();
-			for(int k=0;k<pow(10,n[j]);k++) {
-				queue->push(new Element<int>(new int));
-			}
-			timer.stopTimer();
-			queue_resoults[j]=timer.diffTimeMs();
-
-			timer.startTimer();
-			for(int k=0;k<pow(10,n[j]);k++) {
-				stack->push(new Element<int>(new int));
-			}
-			timer.stopTimer();
-			stash_resoults[j]=timer.diffTimeMs();
-
-		}
-
-		cout<<"Wyniki: \n";
-		cout<<"Lista: \n";
-		for(int i=0;i<n_size;i++) {
-			cout<<"10^"<<n[i]<<": "<<list_resoults[i]<<" ms \n";
-		}
-		cout<<"\n";
-		cout<<"Kolejka: \n";
-		for(int i=0;i<n_size;i++) {
-			cout<<"10^"<<n[i]<<": "<<queue_resoults[i]<<" ms \n";
-		}
-		cout<<"\n";
-		cout<<"Stos: \n";
-		for(int i=0;i<n_size;i++) {
-			cout<<"10^"<<n[i]<<": "<<stash_resoults[i]<<" ms \n";
-		}
-
+	//ArrayImplementation::List<int>* list;
 
 	return 0;
 }

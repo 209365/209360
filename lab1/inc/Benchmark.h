@@ -10,15 +10,15 @@
 
 #include <iostream>
 
-#include "../inc/Timer.h"
+#include "Timer.h"
 
-#include "../inc/LinkedListImplementation/List.h"
-#include "../inc/LinkedListImplementation/Queue.h"
-#include "../inc/LinkedListImplementation/Stack.h"
+#include "LinkedListImplementation/List.h"
+#include "LinkedListImplementation/Queue.h"
+#include "LinkedListImplementation/Stack.h"
 
-#include "../inc/ArrayImplementation/List.h"
-#include "../inc/ArrayImplementation/Queue.h"
-#include "../inc/ArrayImplementation/Stack.h"
+#include "ArrayImplementation/List.h"
+#include "ArrayImplementation/Queue.h"
+#include "ArrayImplementation/Stack.h"
 
 template <class T>
 class Benchmark {
@@ -28,13 +28,14 @@ private:
 	void showResoults(int resoults, char* contener_name);
 public:
 	Benchmark();
-	void testLList(ListImplementation::List<T>* list);
-	void testLQueque(ListImplementation::Queue<T>* queue);
-	void testLStack(ListImplementation::Stack<T>* stack);
+	void testList(ArrayImplementation::List<T>* list);
+	void testQueque(ArrayImplementation::Queue<T>* queue);
+	void testStack(ArrayImplementation::Stack<T>* stack);
 
-	void testAList(ArrayImplementation::List<T>* list);
-	void testAQueque(ArrayImplementation::Queue<T>* queue);
-	void testAStack(ArrayImplementation::Stack<T>* stack);
+	void testList(ListImplementation::List<T>* list);
+	void testQueque(ListImplementation::Queue<T>* queue);
+	void testStack(ListImplementation::Stack<T>* stack);
+
 };
 
 #endif /* BENCHMARK_H_ */

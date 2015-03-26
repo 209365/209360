@@ -7,8 +7,8 @@ Queue.h
 Deklaracja i definicja klasy Queue
 */
 
-#ifndef QUEUE_H_
-#define QUEUE_H_
+#ifndef LIST_QUEUE_H_
+#define LIST_QUEUE_H_
 
 #include "List.h"
 
@@ -54,4 +54,4 @@ public:
 }
 
 
-#endif /* QUEUE_H_ */
+#endif /* LIST_QUEUE_H_ */

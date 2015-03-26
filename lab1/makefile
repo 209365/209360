@@ -4,17 +4,14 @@ CFLAGS = -Wall
 OBJ =\
 	obj/main.o \
 	obj/Element.o \
-	obj/List.o \
-	obj/Queue.o \
-	obj/Stash.o \
-	obj/Timer.o
-
-INC = \
-	inc/Element.h \
-	inc/List.h \
-	inc/Queue.h \
-	inc/Stash.h 
-
+	obj/Benchmark.o \
+	obj/Timer.o \
+	obj/ArrayImplementation/List.o \
+	obj/ArrayImplementation/Queue.o \
+	obj/ArrayImplementation/Stack.o \
+	obj/ListImplementation/List.o \
+	obj/ListImplementation/Queue.o \
+	obj/ListImplementation/Stack.o
 
 all: obj main
 
@@ -30,7 +27,7 @@ obj:
 clean:
 	rm -f *.o program obj/*.o
 
-$(OBJ): obj/%.o : src/%.cpp 
+$(OBJ): obj/%.o : src/%.cpp src/ArrayImplementation/%.cpp src/ListImplementation/%.cpp
 	$(CC) -c $(CFLAGS) $< -o $@
 
 main: $(OBJ)
