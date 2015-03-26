@@ -8,14 +8,15 @@ Deklaracja klasy Lista (w implementacji opartej na tablicy)
 */
 #ifndef ARRAY_LIST_H_
 #define ARRAY_LIST_H_
-#define DEFAULT_MAX_SIZE 1000
+#define DEFAULT_MAX_SIZE 1
 #include "../Element.h"
+#include "Increase.h"
 #include <iostream>
 
 namespace ArrayImplementation {
 /**
 \brief
-Klasa reprezentująca podstawy konterner danych z którego korzystają inne - Listę zaimplementowaną na tablicy
+Klasa reprezentująca podstawy konterner danych - Listę zaimplementowaną na tablicy
 *
 *
 Klasa reprezentująca podstawy kontener - listę. Jest to implemetacja listy oparta na tablicy.
@@ -30,9 +31,9 @@ private:
 	static unsigned int _MAX_SIZE;
 	/**
 	\brief
-	Wskaźnik tablicy przechowującej elementy zawarte w liście
+	Wskaźnik do wskaźników przechowujących elementy listy
 	*/
-	Element<T>* _elements;
+	T** _elements;
 	/**
 	\brief
 	Aktualna liczba elementów w liście
@@ -40,13 +41,6 @@ private:
 	unsigned int _numElements;
 
 public:
-	/**
-	\brief
-	Enumerator określający sposób powiększania się listy. Określa czy po zapełnieniu listy
-	jej wielkość powinna zwiększyć się dwukrotnie, czy +1.
-	*/
-	enum Increase {Plus_1, Double};
-
 	/**
 	\brief
 	Konstruktor zerujący aktualny rozmiar i przydzielający pamięć tablicy przechowującej dane
@@ -69,7 +63,7 @@ public:
 	* \param index określa indeks elementu znajdującego się na liście, który zostanie zwrócony
 	*\return element listy o pozycji index
 	*/
-	Element<T>* pop(unsigned int index);
+	T* pop(unsigned int index);
 
 	/**
 	\brief
@@ -78,9 +72,8 @@ public:
 	*\param elem element umieszczany do listy
 	*\param index określa pozycję na liście dodawanego elementu (numeracja od 1!)
 	*\param inc określa sposób powiększania się listy w razie braku miejsca
-	*\return zwraca -1 gdy operacja się niepowiodła
 	*/
-	int push(Element<T>* elem, unsigned int index, Increase inc);
+	void push(T* elem, unsigned int index, Increase inc);
 
 	/**
 	\brief
@@ -100,14 +93,94 @@ public:
 
 	/**
 	\brief
-	*wirtualny destruktor czyszczący liste
+	*destruktor czyszczący liste
 	*
 	*Destruktor usuwawa wszystkie elementy z listy
 	*/
-	virtual ~List();
+	~List();
 };
 
 }
+
+template <typename T>
+unsigned int ArrayImplementation::List<T>::_MAX_SIZE=DEFAULT_MAX_SIZE;
+
+template <typename T>
+ArrayImplementation::List<T>::List() {
+	_elements = new T*[_MAX_SIZE];
+	_numElements=0;
+
+}
+template <typename T>
+ArrayImplementation::List<T>::List(unsigned int max_size) {
+	List<T>::_MAX_SIZE=max_size;
+	_elements = new T[_MAX_SIZE];
+	_numElements=0;
+
+}
+
+template <typename T>
+unsigned int ArrayImplementation::List<T>::size() {
+	return _numElements;
+}
+
+template <typename T>
+unsigned short ArrayImplementation::List<T>::isEmpty() {
+
+	return (this->_numElements<=0);
+}
+
+template <typename T>
+void ArrayImplementation::List<T>::push(T* elem, unsigned int index, Increase inc) {
+	if(_numElements>=_MAX_SIZE) {
+		if(inc == Plus_1) {
+			_MAX_SIZE++;
+			T** temp = new T*[_MAX_SIZE];
+			for(int i=0;i<_numElements;i++) {
+				temp[i]=_elements[i];
+			}
+			delete[] _elements;
+			_elements=temp;
+			//std::cerr<<"Lista powiększona o 1 \n";
+		}
+		if(inc == Double) {
+			_MAX_SIZE*=2;
+			T** temp = new T*[_MAX_SIZE];
+			for(int i=0;i<_numElements;i++) {
+				temp[i]=_elements[i];
+			}
+			delete[] _elements;
+			_elements=temp;
+			//std::cerr<<"Lista powiększona dwukrotnie \n";
+		}
+	}
+	for (int pos = _numElements; pos >= index; pos--) {
+	          _elements[pos] = _elements[pos-1];
+	      }
+	      _elements[index-1] = elem;
+	      _numElements++;
+
+}
+
+template <typename T>
+T* ArrayImplementation::List<T>::pop(unsigned int index) {
+	if((index>=1) && (index<=_numElements) ){
+		for (int pos = _numElements; pos >= index; pos--) {
+			_elements[pos] = _elements[pos-1];
+
+			  }
+	      _numElements--;
+		return _elements[index-1];
+	}
+
+
+}
+
+template <typename T>
+ArrayImplementation::List<T>::~List() {
+	delete[] _elements;
+}
+
 
 
 #endif /* ARRAY_LIST_H_*/

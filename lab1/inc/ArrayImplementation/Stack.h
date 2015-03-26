@@ -9,9 +9,10 @@ Deklaracja i definicja klasy Stack w wersji tablicowej
 
 #ifndef ARRAY_STACK_H_
 #define ARRAY_STACK_H_
-#define DEFAULT_MAX_SIZE 1000
+#define DEFAULT_MAX_SIZE 1
 #include "List.h"
 #include "../Element.h"
+#include "Increase.h"
 
 namespace ArrayImplementation {
 /**
@@ -26,9 +27,9 @@ class Stack {
 private:
 	/**
 	\brief
-	Wskaźnik tablicy przechowującej elementy zawarte w stosie
+	Wskaźnik tablicy przechowującej wskaźniki wskazujące na zawarte elementy
 	*/
-	Element<T>* _elements;
+	T** _elements;
 	/**
 	\brief
 	Indeks elementu będącego na wierzchu stosu
@@ -40,12 +41,6 @@ private:
 	*/
 	static unsigned int _MAX_SIZE;
 public:
-	/**
-	\brief
-	Enumerator określający sposób powiększania się stosu. Określa czy po zapełnieniu stosu
-	jej wielkość powinna zwiększyć się dwukrotnie, czy +1.
-	*/
-	enum Increase {Plus_1, Double};
 	/**
 	\brief
 	Konstruktor przydzielający pamieć na stos w ilości _MAX_SIZE oraz zerujący szczyt stosu
@@ -73,7 +68,7 @@ public:
 	*\param elem element, który zostanie umieszczony na wierzchu stosu
 	*\param inc określa sposób powiększania się stosu w razie braku miejsca
 	*/
-	void push(Element<T>* elem, Increase inc);
+	void push(T* elem, Increase inc);
 
 	/**
 	\brief
@@ -98,6 +93,77 @@ public:
 	~Stack();
 };
 
+}
+
+
+template <typename T>
+unsigned int ArrayImplementation::Stack<T>::_MAX_SIZE=DEFAULT_MAX_SIZE;
+
+template <typename T>
+ArrayImplementation::Stack<T>::Stack() {
+	_elements = new T*[_MAX_SIZE];
+	_top=0;
+}
+template <typename T>
+ArrayImplementation::Stack<T>::Stack(int max_size){
+	_MAX_SIZE=max_size;
+	_elements = new T*[_MAX_SIZE];
+	_top=0;
+}
+
+template <typename T>
+Element<T>* ArrayImplementation::Stack<T>::pop() {
+	if(_top<0) {
+		std::cerr<<"Brak elementow na liscie";
+	}
+	else {
+		return _elements[_top--];
+	}
+}
+
+template <typename T>
+void ArrayImplementation::Stack<T>::push(T* elem, Increase inc) {
+	if(_top>=_MAX_SIZE) {
+		if(inc == Plus_1) {
+				_MAX_SIZE++;
+				T** temp = new T*[_MAX_SIZE];
+				for(int i=0;i<_top;i++) {
+					temp[i]=_elements[i];
+				}
+				delete[] _elements;
+				_elements=temp;
+				//std::cerr<<"Stos powiększony o 1 \n";
+
+				}
+
+			if(inc == Double) {
+				_MAX_SIZE*=2;
+				T** temp = new T*[_MAX_SIZE];
+				for(int i=0;i<_top;i++) {
+					temp[i]=_elements[i];
+				}
+				delete[] _elements;
+				_elements=temp;
+				//std::cerr<<"Stos powiększony dwukrotnie \n";
+			}
+	}
+	_elements[_top++]=elem;
+}
+
+template <typename T>
+int ArrayImplementation::Stack<T>::size() {
+	return (_top+1);
+}
+
+template <typename T>
+unsigned short ArrayImplementation::Stack<T>::isEmpty() {
+
+	return (this->_top<0);
+}
+
+template <typename T>
+ArrayImplementation::Stack<T>::~Stack() {
+	delete[] _elements;
 }
 
 

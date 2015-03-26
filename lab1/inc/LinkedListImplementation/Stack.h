@@ -54,5 +54,20 @@ public:
 
 }
 
+template <typename T>
+ListImplementation::Stack<T>::Stack() :List<T>(){}
+
+template <typename T>
+Element<T>* ListImplementation::Stack<T>::pop() {
+	return List<T>::pop(ListImplementation::Front);
+
+}
+
+template <typename T>
+void ListImplementation::Stack<T>::push(Element<T>* elem) {
+	List<T>::push(elem,ListImplementation::Front);
+}
+
+
 
 #endif /* LIST_STACK_H_*/

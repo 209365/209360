@@ -9,8 +9,9 @@ Deklaracja i definicja klasy Queue
 
 #ifndef ARRAY_QUEUE_H_
 #define ARRAY_QUEUE_H_
-#define DEFAULT_MAX_SIZE 1000
+#define DEFAULT_MAX_SIZE 1
 #include "../Element.h"
+#include "Increase.h"
 
 namespace ArrayImplementation {
 /**
@@ -25,9 +26,9 @@ class Queue {
 private:
 	/**
 	\brief
-	Tablica zawierająca elementy (podstawowe "pojemniki danych")
+	Tablica wskaźników przechowująca wskaźniki na przechowywane dane
 	*/
-	Element<T>* _elements;
+	T** _elements;
 	/**
 	\brief
 	Indeks elementu na początku kolejki
@@ -40,13 +41,6 @@ private:
 	static unsigned int _MAX_SIZE;
 
 public:
-	/**
-	\brief
-	Enumerator określający sposób powiększania się kolejki. Określa czy po zapełnieniu kolejki
-	jej wielkość powinna zwiększyć się dwukrotnie, czy +1.
-	*/
-	enum Increase {Plus_1, Double};
-
 	/**
 	\brief
 	Konstruktor alokujący pamięć na kolejkę oraz zerujący indeks elementu na końcu kolejki
@@ -66,7 +60,7 @@ public:
 	*
 	*\return element będący na początku kolejki
 	*/
-	Element<T>* pop();
+	T* pop();
 
 	/**
 	\brief
@@ -75,7 +69,7 @@ public:
 	*\param elem element umieszczany na końcu kolejki
 	*\param inc określa sposób powiększania się kolejki w razie braku miejsca
 	*/
-	void push(Element<T>* elem, Increase inc);
+	void push(T* elem, Increase inc);
 
 	/**
 	\brief
@@ -84,6 +78,67 @@ public:
 	~Queue();
 };
 
+}
+
+
+template <typename T>
+unsigned int ArrayImplementation::Queue<T>::_MAX_SIZE=DEFAULT_MAX_SIZE;
+
+template <typename T>
+ArrayImplementation::Queue<T>::Queue() {
+	_elements = new T*[_MAX_SIZE];
+	_top=0;
+}
+
+template <typename T>
+ArrayImplementation::Queue<T>::Queue(unsigned int max_size){
+	_MAX_SIZE=max_size;
+	_elements = new T*[_MAX_SIZE];
+	_top=0;
+}
+
+template <typename T>
+T* ArrayImplementation::Queue<T>::pop() {
+	T* elem= _elements[0];
+	for (int i=0;i<_top-1;i++)
+	     _elements[i]= _elements[i+1];
+	     _top--;
+return elem;
+}
+
+template <typename T>
+void ArrayImplementation::Queue<T>::push(T* elem, Increase inc) {
+	if(_top>=_MAX_SIZE) {
+		if(inc == Plus_1) {
+		_MAX_SIZE++;
+		T** temp = new T*[_MAX_SIZE];
+		for(int i=0;i<_top;i++) {
+			temp[i]=_elements[i];
+		}
+		delete[] _elements;
+		_elements=temp;
+		//std::cerr<<"Kolejka powiększona o 1 \n";
+
+		}
+
+	if(inc == Double) {
+		_MAX_SIZE*=2;
+		T** temp = new T*[_MAX_SIZE];
+		for(int i=0;i<_top;i++) {
+			temp[i]=_elements[i];
+		}
+		delete[] _elements;
+		_elements=temp;
+		//std::cerr<<"Lista powiększona dwukrotnie \n";
+	}
+	}
+	_elements[_top++]=elem;
+
+}
+
+template <typename T>
+ArrayImplementation::Queue<T>::~Queue() {
+	delete[] _elements;
 }
 
 #endif /* ARRAY_QUEUE_H_ */

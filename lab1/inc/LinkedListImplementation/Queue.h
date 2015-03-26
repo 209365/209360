@@ -53,5 +53,19 @@ public:
 
 }
 
+template <typename T>
+ListImplementation::Queue<T>::Queue() :List<T>(){}
+
+template <typename T>
+Element<T>* ListImplementation::Queue<T>::pop() {
+	return List<T>::pop(ListImplementation::Front);
+
+}
+
+template <typename T>
+void ListImplementation::Queue<T>::push(Element<T>* elem) {
+	List<T>::push(elem,ListImplementation::Back);
+
+}
 
 #endif /* LIST_QUEUE_H_ */
