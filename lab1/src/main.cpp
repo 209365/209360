@@ -35,7 +35,8 @@ Mail:
  \latexonly
  \newpage
   \begin{flushleft}
-
+test
+\end{flushleft}
  \endlatexonly
 */
 
@@ -52,14 +53,34 @@ Mail:
 using namespace std;
 
 int main() {
-	Benchmark<int> bench(2);
-	//ListImplementation::List<int>* list = new ListImplementation::List<int>();
-	//ListImplementation::Queue<int>* queue = new ListImplementation::Queue<int>();
-	//ListImplementation::Stack<int>* stack = new ListImplementation::Stack<int>();
-	//ArrayImplementation::List<int>* list = new ArrayImplementation::List<int>();
-	//ArrayImplementation::Queue<int>* list = new ArrayImplementation::Queue<int>();
-	ArrayImplementation::Stack<int>* stack = new ArrayImplementation::Stack<int>();
-	bench.testStack(stack, ArrayImplementation::Double);
+	unsigned int problem_size_power = 8;
+
+	Benchmark<int> bench(problem_size_power);
+
+	ListImplementation::List<int>* list = new ListImplementation::List<int>();
+	ListImplementation::Queue<int>* list_queue = new ListImplementation::Queue<int>();
+	ListImplementation::Stack<int>* list_stack = new ListImplementation::Stack<int>();
+
+	ArrayImplementation::List<int>* array_list_x2 = new ArrayImplementation::List<int>();
+	ArrayImplementation::Queue<int>* array_queue_x2 = new ArrayImplementation::Queue<int>();
+	ArrayImplementation::Stack<int>* array_stack_x2 = new ArrayImplementation::Stack<int>();
+
+	ArrayImplementation::List<int>* array_list_1 = new ArrayImplementation::List<int>();
+	ArrayImplementation::Queue<int>* array_queue_1 = new ArrayImplementation::Queue<int>();
+	ArrayImplementation::Stack<int>* array_stack_1 = new ArrayImplementation::Stack<int>();
+
+	bench.testList(list);
+	bench.testList(array_list_x2, ArrayImplementation::Double);
+	bench.testList(array_list_1, ArrayImplementation::Plus_1);
+
+	bench.testQueue(list_queue);
+	bench.testQueue(array_queue_x2, ArrayImplementation::Double);
+	bench.testQueue(array_queue_1, ArrayImplementation::Plus_1);
+
+	bench.testStack(list_stack);
+	bench.testStack(array_stack_x2, ArrayImplementation::Double);
+	bench.testStack(array_stack_1, ArrayImplementation::Plus_1);
+
 
 	return 0;
 }

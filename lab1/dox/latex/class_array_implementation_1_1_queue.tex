@@ -1,0 +1,94 @@
+\hypertarget{class_array_implementation_1_1_queue}{\section{Dokumentacja szablonu klasy Array\-Implementation\-:\-:Queue$<$ T $>$}
+\label{class_array_implementation_1_1_queue}\index{Array\-Implementation\-::\-Queue$<$ T $>$@{Array\-Implementation\-::\-Queue$<$ T $>$}}
+}
+
+
+Klasa reprezentująca podstawy konterner danych kolejke zaimplementowaną na tablicy.  
+
+
+
+
+{\ttfamily \#include $<$Queue.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_array_implementation_1_1_queue_ac7a57953bf0b2f661e51eebff2ce3a33}{\hyperlink{class_array_implementation_1_1_queue_ac7a57953bf0b2f661e51eebff2ce3a33}{Queue} ()}\label{class_array_implementation_1_1_queue_ac7a57953bf0b2f661e51eebff2ce3a33}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor alokujący pamięć na kolejkę oraz zerujący indeks elementu na końcu kolejki. \end{DoxyCompactList}\item 
+\hyperlink{class_array_implementation_1_1_queue_ac17b065619517a4cbdd0f5b32d007548}{Queue} (unsigned int max\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Konstruktor alokujący pamięć na kolejkę w ilości max\-\_\-size oraz zerujący indeks elementu na końcu kolejki. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_array_implementation_1_1_queue_a9cb6a0e891a5bd1086028dadcadcc8c3}{pop} ()
+\begin{DoxyCompactList}\small\item\em zwraca element z początku kolejki \end{DoxyCompactList}\item 
+void \hyperlink{class_array_implementation_1_1_queue_afafcb7c4d247f8e887b6f29dc179bd38}{push} (T $\ast$elem, Increase inc)
+\begin{DoxyCompactList}\small\item\em dodaje element na koniec kolejki \end{DoxyCompactList}\item 
+\hypertarget{class_array_implementation_1_1_queue_ad178e4eee785f70f83fb9526fbaeea16}{\hyperlink{class_array_implementation_1_1_queue_ad178e4eee785f70f83fb9526fbaeea16}{$\sim$\-Queue} ()}\label{class_array_implementation_1_1_queue_ad178e4eee785f70f83fb9526fbaeea16}
+
+\begin{DoxyCompactList}\small\item\em Destruktor usuwa tablicę przechowującą elementy kolejki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class Array\-Implementation\-::\-Queue$<$ T $>$}
+
+Klasa reprezentująca podstawy konterner danych kolejke zaimplementowaną na tablicy. 
+
+Kolejka jest strukturą danych typu typu F\-I\-F\-O, First In, First Out; pierwszy na wejściu, pierwszy na wyjściu 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_array_implementation_1_1_queue_ac17b065619517a4cbdd0f5b32d007548}{\index{Array\-Implementation\-::\-Queue@{Array\-Implementation\-::\-Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!ArrayImplementation::Queue@{Array\-Implementation\-::\-Queue}}
+\subsubsection[{Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Array\-Implementation\-::\-Queue}$<$ T $>$\-::{\bf Queue} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_queue_ac17b065619517a4cbdd0f5b32d007548}
+
+
+Konstruktor alokujący pamięć na kolejkę w ilości max\-\_\-size oraz zerujący indeks elementu na końcu kolejki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em max\-\_\-size} & maksymalna liczba elementów w kolejce \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_array_implementation_1_1_queue_a9cb6a0e891a5bd1086028dadcadcc8c3}{\index{Array\-Implementation\-::\-Queue@{Array\-Implementation\-::\-Queue}!pop@{pop}}
+\index{pop@{pop}!ArrayImplementation::Queue@{Array\-Implementation\-::\-Queue}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Array\-Implementation\-::\-Queue}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_queue_a9cb6a0e891a5bd1086028dadcadcc8c3}
+
+
+zwraca element z początku kolejki 
+
+\begin{DoxyReturn}{Zwraca}
+element będący na początku kolejki 
+\end{DoxyReturn}
+\hypertarget{class_array_implementation_1_1_queue_afafcb7c4d247f8e887b6f29dc179bd38}{\index{Array\-Implementation\-::\-Queue@{Array\-Implementation\-::\-Queue}!push@{push}}
+\index{push@{push}!ArrayImplementation::Queue@{Array\-Implementation\-::\-Queue}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Array\-Implementation\-::\-Queue}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{elem, }
+\item[{Increase}]{inc}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_queue_afafcb7c4d247f8e887b6f29dc179bd38}
+
+
+dodaje element na koniec kolejki 
+
+
+\begin{DoxyParams}{Parametry}
+{\em elem} & element umieszczany na końcu kolejki \\
+\hline
+{\em inc} & określa sposób powiększania się kolejki w razie braku miejsca \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\-Array\-Implementation/\hyperlink{_array_implementation_2_queue_8h}{Queue.\-h}\end{DoxyCompactItemize}

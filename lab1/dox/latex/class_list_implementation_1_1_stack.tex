@@ -1,0 +1,76 @@
+\hypertarget{class_list_implementation_1_1_stack}{\section{Dokumentacja szablonu klasy List\-Implementation\-:\-:Stack$<$ T $>$}
+\label{class_list_implementation_1_1_stack}\index{List\-Implementation\-::\-Stack$<$ T $>$@{List\-Implementation\-::\-Stack$<$ T $>$}}
+}
+
+
+Klasa reprezentująca podstawy konterner danych -\/ stos.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\-h$>$}
+
+Diagram dziedziczenia dla List\-Implementation\-:\-:Stack$<$ T $>$\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_list_implementation_1_1_stack}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_list_implementation_1_1_stack_adb5bbd213fc32837a8bccfe76dd40d64}{\hyperlink{class_list_implementation_1_1_stack_adb5bbd213fc32837a8bccfe76dd40d64}{Stack} ()}\label{class_list_implementation_1_1_stack_adb5bbd213fc32837a8bccfe76dd40d64}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor wywołujący konstruktor klasy bazowej \hyperlink{class_list_implementation_1_1_list}{List}. \end{DoxyCompactList}\item 
+\hyperlink{class_element}{Element}$<$ T $>$ $\ast$ \hyperlink{class_list_implementation_1_1_stack_abdb24c8782d108c5860d7cdf6684edcb}{pop} ()
+\begin{DoxyCompactList}\small\item\em zwraca element z wierzchu stosu \end{DoxyCompactList}\item 
+void \hyperlink{class_list_implementation_1_1_stack_a68d1136b2a159ebb9a0f3f8b6556f404}{push} (\hyperlink{class_element}{Element}$<$ T $>$ $\ast$elem)
+\begin{DoxyCompactList}\small\item\em dodaje element na wierzch \end{DoxyCompactList}\item 
+\hypertarget{class_list_implementation_1_1_stack_a42841378ab51ccfd0e666db83daa5365}{virtual \hyperlink{class_list_implementation_1_1_stack_a42841378ab51ccfd0e666db83daa5365}{$\sim$\-Stack} ()}\label{class_list_implementation_1_1_stack_a42841378ab51ccfd0e666db83daa5365}
+
+\begin{DoxyCompactList}\small\item\em Wywołuje destruktor klasy bazowej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class List\-Implementation\-::\-Stack$<$ T $>$}
+
+Klasa reprezentująca podstawy konterner danych -\/ stos. 
+
+Kolejka jest strukturą danych typu typu L\-I\-F\-O, Last In, First Out; ostatni na wejściu, pierwszy na wyjściu 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_list_implementation_1_1_stack_abdb24c8782d108c5860d7cdf6684edcb}{\index{List\-Implementation\-::\-Stack@{List\-Implementation\-::\-Stack}!pop@{pop}}
+\index{pop@{pop}!ListImplementation::Stack@{List\-Implementation\-::\-Stack}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$ $\ast$ {\bf List\-Implementation\-::\-Stack}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_stack_abdb24c8782d108c5860d7cdf6684edcb}
+
+
+zwraca element z wierzchu stosu 
+
+\begin{DoxyReturn}{Zwraca}
+element będący na wierzchu stosu 
+\end{DoxyReturn}
+\hypertarget{class_list_implementation_1_1_stack_a68d1136b2a159ebb9a0f3f8b6556f404}{\index{List\-Implementation\-::\-Stack@{List\-Implementation\-::\-Stack}!push@{push}}
+\index{push@{push}!ListImplementation::Stack@{List\-Implementation\-::\-Stack}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List\-Implementation\-::\-Stack}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Element}$<$ T $>$ $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_stack_a68d1136b2a159ebb9a0f3f8b6556f404}
+
+
+dodaje element na wierzch 
+
+
+\begin{DoxyParams}{Parametry}
+{\em elem} & element, który zostanie umieszczony na wierzchu stosu \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\-Linked\-List\-Implementation/\hyperlink{_linked_list_implementation_2_stack_8h}{Stack.\-h}\end{DoxyCompactItemize}

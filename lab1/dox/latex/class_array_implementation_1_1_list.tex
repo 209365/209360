@@ -1,0 +1,147 @@
+\hypertarget{class_array_implementation_1_1_list}{\section{Dokumentacja szablonu klasy Array\-Implementation\-:\-:List$<$ T $>$}
+\label{class_array_implementation_1_1_list}\index{Array\-Implementation\-::\-List$<$ T $>$@{Array\-Implementation\-::\-List$<$ T $>$}}
+}
+
+
+Klasa reprezentująca podstawy konterner danych -\/ Listę zaimplementowaną na tablicy.  
+
+
+
+
+{\ttfamily \#include $<$List.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_array_implementation_1_1_list_a751192da0de1a1e4095a259f24ba4bb8}{\hyperlink{class_array_implementation_1_1_list_a751192da0de1a1e4095a259f24ba4bb8}{List} ()}\label{class_array_implementation_1_1_list_a751192da0de1a1e4095a259f24ba4bb8}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor zerujący aktualny rozmiar i przydzielający pamięć tablicy przechowującej dane w ilości \-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E. \end{DoxyCompactList}\item 
+\hyperlink{class_array_implementation_1_1_list_a8e7dfb9fc4fb0fb71d9bbf23973f5699}{List} (unsigned int max\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Konstruktor zerujący rozmiar i przydzielający pamięć tablicy przechowującej dane w ilości określonej przez parametr max\-\_\-size. \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_array_implementation_1_1_list_a24975f10b03e5aad6f326b29c0cfaa63}{pop} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em zwraca element o indeksie określonej przez parametr index (równocześnie usuwając go z listy) \end{DoxyCompactList}\item 
+void \hyperlink{class_array_implementation_1_1_list_a4a058e7e1cfeaae6c690d924302e6b24}{push} (T $\ast$elem, unsigned int index, Increase inc)
+\begin{DoxyCompactList}\small\item\em dodaje element o indkesie index do listy \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_array_implementation_1_1_list_ae8da3221156f614925873483913d2d38}{size} ()
+\begin{DoxyCompactList}\small\item\em zwraca aktualny rozmiar listy \end{DoxyCompactList}\item 
+unsigned short \hyperlink{class_array_implementation_1_1_list_a8ff22bf7b90648b3cb1d8bf9ff3fec3a}{is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em zwraca 1, gdy lista jest pusta. 0, gdy są jakieś elementy \end{DoxyCompactList}\item 
+\hyperlink{class_array_implementation_1_1_list_abf2ba8cfb1c4b2fa9fb585460702292b}{$\sim$\-List} ()
+\begin{DoxyCompactList}\small\item\em destruktor czyszczący liste \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class Array\-Implementation\-::\-List$<$ T $>$}
+
+Klasa reprezentująca podstawy konterner danych -\/ Listę zaimplementowaną na tablicy. 
+
+Klasa reprezentująca podstawy kontener -\/ listę. Jest to implemetacja listy oparta na tablicy. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_array_implementation_1_1_list_a8e7dfb9fc4fb0fb71d9bbf23973f5699}{\index{Array\-Implementation\-::\-List@{Array\-Implementation\-::\-List}!List@{List}}
+\index{List@{List}!ArrayImplementation::List@{Array\-Implementation\-::\-List}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Array\-Implementation\-::\-List}$<$ T $>$\-::{\bf List} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_list_a8e7dfb9fc4fb0fb71d9bbf23973f5699}
+
+
+Konstruktor zerujący rozmiar i przydzielający pamięć tablicy przechowującej dane w ilości określonej przez parametr max\-\_\-size. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em max\-\_\-size} & maksymalna liczba elementów w liście \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_array_implementation_1_1_list_abf2ba8cfb1c4b2fa9fb585460702292b}{\index{Array\-Implementation\-::\-List@{Array\-Implementation\-::\-List}!$\sim$\-List@{$\sim$\-List}}
+\index{$\sim$\-List@{$\sim$\-List}!ArrayImplementation::List@{Array\-Implementation\-::\-List}}
+\subsubsection[{$\sim$\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Array\-Implementation\-::\-List}$<$ T $>$\-::$\sim${\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_list_abf2ba8cfb1c4b2fa9fb585460702292b}
+
+
+destruktor czyszczący liste 
+
+Destruktor usuwawa wszystkie elementy z listy 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_array_implementation_1_1_list_a8ff22bf7b90648b3cb1d8bf9ff3fec3a}{\index{Array\-Implementation\-::\-List@{Array\-Implementation\-::\-List}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!ArrayImplementation::List@{Array\-Implementation\-::\-List}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned short {\bf Array\-Implementation\-::\-List}$<$ T $>$\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_list_a8ff22bf7b90648b3cb1d8bf9ff3fec3a}
+
+
+zwraca 1, gdy lista jest pusta. 0, gdy są jakieś elementy 
+
+\begin{DoxyReturn}{Zwraca}
+zwraca informacje, czy w liście są jakieś elementy 
+\end{DoxyReturn}
+\hypertarget{class_array_implementation_1_1_list_a24975f10b03e5aad6f326b29c0cfaa63}{\index{Array\-Implementation\-::\-List@{Array\-Implementation\-::\-List}!pop@{pop}}
+\index{pop@{pop}!ArrayImplementation::List@{Array\-Implementation\-::\-List}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Array\-Implementation\-::\-List}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_list_a24975f10b03e5aad6f326b29c0cfaa63}
+
+
+zwraca element o indeksie określonej przez parametr index (równocześnie usuwając go z listy) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & określa indeks elementu znajdującego się na liście, który zostanie zwrócony \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+element listy o pozycji index 
+\end{DoxyReturn}
+\hypertarget{class_array_implementation_1_1_list_a4a058e7e1cfeaae6c690d924302e6b24}{\index{Array\-Implementation\-::\-List@{Array\-Implementation\-::\-List}!push@{push}}
+\index{push@{push}!ArrayImplementation::List@{Array\-Implementation\-::\-List}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Array\-Implementation\-::\-List}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{elem, }
+\item[{unsigned int}]{index, }
+\item[{Increase}]{inc}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_list_a4a058e7e1cfeaae6c690d924302e6b24}
+
+
+dodaje element o indkesie index do listy 
+
+\begin{DoxyPrecond}{Warunek wstępny}
+Indeksowanie zaczyna się od 1 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parametry}
+{\em elem} & element umieszczany do listy \\
+\hline
+{\em index} & określa pozycję na liście dodawanego elementu (numeracja od 1!) \\
+\hline
+{\em inc} & określa sposób powiększania się listy w razie braku miejsca \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_array_implementation_1_1_list_ae8da3221156f614925873483913d2d38}{\index{Array\-Implementation\-::\-List@{Array\-Implementation\-::\-List}!size@{size}}
+\index{size@{size}!ArrayImplementation::List@{Array\-Implementation\-::\-List}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned int {\bf Array\-Implementation\-::\-List}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_list_ae8da3221156f614925873483913d2d38}
+
+
+zwraca aktualny rozmiar listy 
+
+\begin{DoxyReturn}{Zwraca}
+rozmiar listy 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\-Array\-Implementation/\hyperlink{_array_implementation_2_list_8h}{List.\-h}\end{DoxyCompactItemize}

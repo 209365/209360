@@ -1,0 +1,76 @@
+\hypertarget{class_list_implementation_1_1_queue}{\section{Dokumentacja szablonu klasy List\-Implementation\-:\-:Queue$<$ T $>$}
+\label{class_list_implementation_1_1_queue}\index{List\-Implementation\-::\-Queue$<$ T $>$@{List\-Implementation\-::\-Queue$<$ T $>$}}
+}
+
+
+Klasa reprezentująca podstawy konterner danych kolejke.  
+
+
+
+
+{\ttfamily \#include $<$Queue.\-h$>$}
+
+Diagram dziedziczenia dla List\-Implementation\-:\-:Queue$<$ T $>$\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_list_implementation_1_1_queue}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_list_implementation_1_1_queue_acc4029f7302ff7285eb04a95617fc280}{\hyperlink{class_list_implementation_1_1_queue_acc4029f7302ff7285eb04a95617fc280}{Queue} ()}\label{class_list_implementation_1_1_queue_acc4029f7302ff7285eb04a95617fc280}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor wywołujący konstruktor klasy bazowej \hyperlink{class_list_implementation_1_1_list}{List}. \end{DoxyCompactList}\item 
+\hyperlink{class_element}{Element}$<$ T $>$ $\ast$ \hyperlink{class_list_implementation_1_1_queue_a8860612212b3ab036b2032dc1ee0cb63}{pop} ()
+\begin{DoxyCompactList}\small\item\em zwraca element z początku kolejki \end{DoxyCompactList}\item 
+void \hyperlink{class_list_implementation_1_1_queue_a4b4439f3c97e53691620787cf2847cdc}{push} (\hyperlink{class_element}{Element}$<$ T $>$ $\ast$elem)
+\begin{DoxyCompactList}\small\item\em dodaje element na koniec kolejki \end{DoxyCompactList}\item 
+\hypertarget{class_list_implementation_1_1_queue_ab7c68be079c746681443aa0b06075f24}{virtual \hyperlink{class_list_implementation_1_1_queue_ab7c68be079c746681443aa0b06075f24}{$\sim$\-Queue} ()}\label{class_list_implementation_1_1_queue_ab7c68be079c746681443aa0b06075f24}
+
+\begin{DoxyCompactList}\small\item\em Wywołuje destruktor klasy bazowej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class List\-Implementation\-::\-Queue$<$ T $>$}
+
+Klasa reprezentująca podstawy konterner danych kolejke. 
+
+Kolejka jest strukturą danych typu typu F\-I\-F\-O, First In, First Out; pierwszy na wejściu, pierwszy na wyjściu 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_list_implementation_1_1_queue_a8860612212b3ab036b2032dc1ee0cb63}{\index{List\-Implementation\-::\-Queue@{List\-Implementation\-::\-Queue}!pop@{pop}}
+\index{pop@{pop}!ListImplementation::Queue@{List\-Implementation\-::\-Queue}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$ $\ast$ {\bf List\-Implementation\-::\-Queue}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_queue_a8860612212b3ab036b2032dc1ee0cb63}
+
+
+zwraca element z początku kolejki 
+
+\begin{DoxyReturn}{Zwraca}
+element będący na początku kolejki 
+\end{DoxyReturn}
+\hypertarget{class_list_implementation_1_1_queue_a4b4439f3c97e53691620787cf2847cdc}{\index{List\-Implementation\-::\-Queue@{List\-Implementation\-::\-Queue}!push@{push}}
+\index{push@{push}!ListImplementation::Queue@{List\-Implementation\-::\-Queue}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List\-Implementation\-::\-Queue}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Element}$<$ T $>$ $\ast$}]{elem}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_queue_a4b4439f3c97e53691620787cf2847cdc}
+
+
+dodaje element na koniec kolejki 
+
+
+\begin{DoxyParams}{Parametry}
+{\em elem} & element umieszczany na końcu \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\-Linked\-List\-Implementation/\hyperlink{_linked_list_implementation_2_queue_8h}{Queue.\-h}\end{DoxyCompactItemize}

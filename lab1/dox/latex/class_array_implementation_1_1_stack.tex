@@ -1,0 +1,126 @@
+\hypertarget{class_array_implementation_1_1_stack}{\section{Dokumentacja szablonu klasy Array\-Implementation\-:\-:Stack$<$ T $>$}
+\label{class_array_implementation_1_1_stack}\index{Array\-Implementation\-::\-Stack$<$ T $>$@{Array\-Implementation\-::\-Stack$<$ T $>$}}
+}
+
+
+Klasa reprezentująca podstawy konterner danych -\/ stos w implementacji tablicowej.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_array_implementation_1_1_stack_af8a18d276411683337c92cc561a0b818}{\hyperlink{class_array_implementation_1_1_stack_af8a18d276411683337c92cc561a0b818}{Stack} ()}\label{class_array_implementation_1_1_stack_af8a18d276411683337c92cc561a0b818}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor przydzielający pamieć na stos w ilości \-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E oraz zerujący szczyt stosu. \end{DoxyCompactList}\item 
+\hyperlink{class_array_implementation_1_1_stack_a318a54555d60ce71f4a1481c0abe6767}{Stack} (int max\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Konstruktor przydzielający pamieć na stos w ilości max\-\_\-size oraz zerujący szczyt stosu. \end{DoxyCompactList}\item 
+\hyperlink{class_element}{Element}$<$ T $>$ $\ast$ \hyperlink{class_array_implementation_1_1_stack_a13433ea82af39913646356c9265ee8b5}{pop} ()
+\begin{DoxyCompactList}\small\item\em zwraca element z wierzchu stosu \end{DoxyCompactList}\item 
+void \hyperlink{class_array_implementation_1_1_stack_a0226b9697a5cf1582e922813c7100699}{push} (T $\ast$elem, Increase inc)
+\begin{DoxyCompactList}\small\item\em dodaje element na wierzch \end{DoxyCompactList}\item 
+int \hyperlink{class_array_implementation_1_1_stack_ad02bd7dad167700e9e8f24df91579630}{size} ()
+\begin{DoxyCompactList}\small\item\em zwraca aktualny rozmiar stosu \end{DoxyCompactList}\item 
+unsigned short \hyperlink{class_array_implementation_1_1_stack_aab8f329327f5623bef88ea9c3e6860a8}{is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em zwraca 1, gdy stos jest pusty. 0, gdy są jakieś elementy \end{DoxyCompactList}\item 
+\hypertarget{class_array_implementation_1_1_stack_a6cb79dad45750b1568541655f573504e}{\hyperlink{class_array_implementation_1_1_stack_a6cb79dad45750b1568541655f573504e}{$\sim$\-Stack} ()}\label{class_array_implementation_1_1_stack_a6cb79dad45750b1568541655f573504e}
+
+\begin{DoxyCompactList}\small\item\em Destruktor usuwa pamięc po tablicy \-\_\-elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class Array\-Implementation\-::\-Stack$<$ T $>$}
+
+Klasa reprezentująca podstawy konterner danych -\/ stos w implementacji tablicowej. 
+
+Stos jest strukturą danych typu typu F\-I\-F\-O, Frist In, First Out; pierwszy na wejściu, pierwszy na wyjściu 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_array_implementation_1_1_stack_a318a54555d60ce71f4a1481c0abe6767}{\index{Array\-Implementation\-::\-Stack@{Array\-Implementation\-::\-Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!ArrayImplementation::Stack@{Array\-Implementation\-::\-Stack}}
+\subsubsection[{Stack}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Array\-Implementation\-::\-Stack}$<$ T $>$\-::{\bf Stack} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_stack_a318a54555d60ce71f4a1481c0abe6767}
+
+
+Konstruktor przydzielający pamieć na stos w ilości max\-\_\-size oraz zerujący szczyt stosu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em max\-\_\-size} & maksymalna liczba elementów na stosie \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_array_implementation_1_1_stack_aab8f329327f5623bef88ea9c3e6860a8}{\index{Array\-Implementation\-::\-Stack@{Array\-Implementation\-::\-Stack}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!ArrayImplementation::Stack@{Array\-Implementation\-::\-Stack}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned short {\bf Array\-Implementation\-::\-Stack}$<$ T $>$\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_stack_aab8f329327f5623bef88ea9c3e6860a8}
+
+
+zwraca 1, gdy stos jest pusty. 0, gdy są jakieś elementy 
+
+\begin{DoxyReturn}{Zwraca}
+zwraca informacje, czy na stosie są jakieś elementy 
+\end{DoxyReturn}
+\hypertarget{class_array_implementation_1_1_stack_a13433ea82af39913646356c9265ee8b5}{\index{Array\-Implementation\-::\-Stack@{Array\-Implementation\-::\-Stack}!pop@{pop}}
+\index{pop@{pop}!ArrayImplementation::Stack@{Array\-Implementation\-::\-Stack}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$ $\ast$ {\bf Array\-Implementation\-::\-Stack}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_stack_a13433ea82af39913646356c9265ee8b5}
+
+
+zwraca element z wierzchu stosu 
+
+\begin{DoxyReturn}{Zwraca}
+element będący na wierzchu stosu 
+\end{DoxyReturn}
+\hypertarget{class_array_implementation_1_1_stack_a0226b9697a5cf1582e922813c7100699}{\index{Array\-Implementation\-::\-Stack@{Array\-Implementation\-::\-Stack}!push@{push}}
+\index{push@{push}!ArrayImplementation::Stack@{Array\-Implementation\-::\-Stack}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Array\-Implementation\-::\-Stack}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{elem, }
+\item[{Increase}]{inc}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_stack_a0226b9697a5cf1582e922813c7100699}
+
+
+dodaje element na wierzch 
+
+
+\begin{DoxyParams}{Parametry}
+{\em elem} & element, który zostanie umieszczony na wierzchu stosu \\
+\hline
+{\em inc} & określa sposób powiększania się stosu w razie braku miejsca \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_array_implementation_1_1_stack_ad02bd7dad167700e9e8f24df91579630}{\index{Array\-Implementation\-::\-Stack@{Array\-Implementation\-::\-Stack}!size@{size}}
+\index{size@{size}!ArrayImplementation::Stack@{Array\-Implementation\-::\-Stack}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Array\-Implementation\-::\-Stack}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_array_implementation_1_1_stack_ad02bd7dad167700e9e8f24df91579630}
+
+
+zwraca aktualny rozmiar stosu 
+
+\begin{DoxyReturn}{Zwraca}
+rozmiar stosu 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\-Array\-Implementation/\hyperlink{_array_implementation_2_stack_8h}{Stack.\-h}\end{DoxyCompactItemize}

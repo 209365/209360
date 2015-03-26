@@ -1,0 +1,165 @@
+\hypertarget{class_element}{\section{Dokumentacja szablonu klasy Element$<$ T $>$}
+\label{class_element}\index{Element$<$ T $>$@{Element$<$ T $>$}}
+}
+
+
+Klasa reprezentująca abstrakcyjny \char`\"{}pojemnik na dane\char`\"{}.  
+
+
+
+
+{\ttfamily \#include $<$Element.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_element_a8d1616b3955f2039f3da1a205155e28f}{Element} (T $\ast$data)
+\begin{DoxyCompactList}\small\item\em Konstruktor zapamiętujący adres przechowywanego obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_element_a60f83f9357c3266559bc6c234b5bf664}{set\-Data} (const T $\ast$data)
+\begin{DoxyCompactList}\small\item\em setter do przechowywanej danej \end{DoxyCompactList}\item 
+T $\ast$ \hyperlink{class_element_a3ca1fd83364406ea6928590537101d8d}{get\-Data} () const 
+\begin{DoxyCompactList}\small\item\em getter do przechowywanej danej \end{DoxyCompactList}\item 
+\hyperlink{class_element}{Element}$<$ T $>$ $\ast$ \hyperlink{class_element_ab37531c0ee3bcb3eeeea7f840e3df06a}{next} () const 
+\begin{DoxyCompactList}\small\item\em zwraca wskaźnik do kolejnego elementu na liście \end{DoxyCompactList}\item 
+\hyperlink{class_element}{Element}$<$ T $>$ $\ast$ \hyperlink{class_element_a3fee6e442312fb97eafb813e973b0001}{prev} () const 
+\begin{DoxyCompactList}\small\item\em zwraca wskaźnik do poprzedniego elementu na liście \end{DoxyCompactList}\item 
+void \hyperlink{class_element_abef5eda7c1de337f65fd7e021972e4a4}{set\-Next} (\hyperlink{class_element}{Element}$<$ T $>$ $\ast$\hyperlink{class_element_ab37531c0ee3bcb3eeeea7f840e3df06a}{next})
+\begin{DoxyCompactList}\small\item\em ustawia kolejny element listy \end{DoxyCompactList}\item 
+void \hyperlink{class_element_a8be274e88ceb7bf10f42a9880283da38}{set\-Prev} (\hyperlink{class_element}{Element}$<$ T $>$ $\ast$\hyperlink{class_element_a3fee6e442312fb97eafb813e973b0001}{prev})
+\begin{DoxyCompactList}\small\item\em ustawia poprzedni element listy \end{DoxyCompactList}\item 
+\hyperlink{class_element_a6d70e2988f89ccea0664dc396a05f4ab}{$\sim$\-Element} ()
+\begin{DoxyCompactList}\small\item\em zwalnianie elementu przechowywanego przez klase \hyperlink{class_element}{Element} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class Element$<$ T $>$}
+
+Klasa reprezentująca abstrakcyjny \char`\"{}pojemnik na dane\char`\"{}. 
+
+Klasa może przechowywać dane zdeterminowane przez typ szablonu, zawiera wskaźnik do kolejnego i poprzedniego elementu (implementacja elementu listy). 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_element_a8d1616b3955f2039f3da1a205155e28f}{\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\subsubsection[{Element}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$\-::{\bf Element} (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_element_a8d1616b3955f2039f3da1a205155e28f}
+
+
+Konstruktor zapamiętujący adres przechowywanego obiektu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & obiekt/zmięnna do przechowania \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_element_a6d70e2988f89ccea0664dc396a05f4ab}{\index{Element@{Element}!$\sim$\-Element@{$\sim$\-Element}}
+\index{$\sim$\-Element@{$\sim$\-Element}!Element@{Element}}
+\subsubsection[{$\sim$\-Element}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$\-::$\sim${\bf Element} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_element_a6d70e2988f89ccea0664dc396a05f4ab}
+
+
+zwalnianie elementu przechowywanego przez klase \hyperlink{class_element}{Element} 
+
+Destruktor zapewniający zwalnianie elementu przechowywanego przez klase \hyperlink{class_element}{Element} 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_element_a3ca1fd83364406ea6928590537101d8d}{\index{Element@{Element}!get\-Data@{get\-Data}}
+\index{get\-Data@{get\-Data}!Element@{Element}}
+\subsubsection[{get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T $\ast$ {\bf Element}$<$ T $>$\-::get\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_element_a3ca1fd83364406ea6928590537101d8d}
+
+
+getter do przechowywanej danej 
+
+Metoda do pobrania wskaźnka przechowywanego danej
+
+\begin{DoxyReturn}{Zwraca}
+wskaźnik do zmięnnej przechowywanej przez klase 
+\end{DoxyReturn}
+\hypertarget{class_element_ab37531c0ee3bcb3eeeea7f840e3df06a}{\index{Element@{Element}!next@{next}}
+\index{next@{next}!Element@{Element}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$ $\ast$ {\bf Element}$<$ T $>$\-::next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_element_ab37531c0ee3bcb3eeeea7f840e3df06a}
+
+
+zwraca wskaźnik do kolejnego elementu na liście 
+
+\begin{DoxyReturn}{Zwraca}
+wskaźnik do kolejnego elementu na liście 
+\end{DoxyReturn}
+\hypertarget{class_element_a3fee6e442312fb97eafb813e973b0001}{\index{Element@{Element}!prev@{prev}}
+\index{prev@{prev}!Element@{Element}}
+\subsubsection[{prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$ $\ast$ {\bf Element}$<$ T $>$\-::prev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_element_a3fee6e442312fb97eafb813e973b0001}
+
+
+zwraca wskaźnik do poprzedniego elementu na liście 
+
+\begin{DoxyReturn}{Zwraca}
+wskaźnik do poprzedniego elementu na liście 
+\end{DoxyReturn}
+\hypertarget{class_element_a60f83f9357c3266559bc6c234b5bf664}{\index{Element@{Element}!set\-Data@{set\-Data}}
+\index{set\-Data@{set\-Data}!Element@{Element}}
+\subsubsection[{set\-Data}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Element}$<$ T $>$\-::set\-Data (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_element_a60f83f9357c3266559bc6c234b5bf664}
+
+
+setter do przechowywanej danej 
+
+Metoda do ustawiania danej przechowywanej przez klase
+
+obiekt/zmięnna, która będzie przechowywana \hypertarget{class_element_abef5eda7c1de337f65fd7e021972e4a4}{\index{Element@{Element}!set\-Next@{set\-Next}}
+\index{set\-Next@{set\-Next}!Element@{Element}}
+\subsubsection[{set\-Next}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Element}$<$ T $>$\-::set\-Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Element}$<$ T $>$ $\ast$}]{next}
+\end{DoxyParamCaption}
+)}}\label{class_element_abef5eda7c1de337f65fd7e021972e4a4}
+
+
+ustawia kolejny element listy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em next} & kolejny element listy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_element_a8be274e88ceb7bf10f42a9880283da38}{\index{Element@{Element}!set\-Prev@{set\-Prev}}
+\index{set\-Prev@{set\-Prev}!Element@{Element}}
+\subsubsection[{set\-Prev}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Element}$<$ T $>$\-::set\-Prev (
+\begin{DoxyParamCaption}
+\item[{{\bf Element}$<$ T $>$ $\ast$}]{prev}
+\end{DoxyParamCaption}
+)}}\label{class_element_a8be274e88ceb7bf10f42a9880283da38}
+
+
+ustawia poprzedni element listy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em prev} & poprzedni element listy \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\hyperlink{_element_8h}{Element.\-h}\end{DoxyCompactItemize}

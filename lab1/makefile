@@ -27,7 +27,7 @@ obj:
 clean:
 	rm -f *.o program obj/*.o
 
-$(OBJ): obj/%.o : src/%.cpp src/ArrayImplementation/%.cpp src/ListImplementation/%.cpp
+$(OBJ): obj/%.o : src/%.cpp
 	$(CC) -c $(CFLAGS) $< -o $@
 
 main: $(OBJ)

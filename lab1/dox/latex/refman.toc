@@ -1,0 +1,96 @@
+\contentsline {chapter}{\numberline {1}Strona g\IeC {\l }\IeC {\'o}wna}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Indeks hierarchiczny}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Hierarchia klas}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Indeks klas}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lista klas}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Indeks plik\IeC {\'o}w}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lista plik\IeC {\'o}w}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Dokumentacja klas}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Dokumentacja szablonu klasy Benchmark$<$ T $>$}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}Dokumentacja szablonu klasy Element$<$ T $>$}{9}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{10}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Dokumentacja konstruktora i destruktora}{10}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Element}{10}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}$\sim $\discretionary {-}{}{}Element}{10}{subsubsection.5.2.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Dokumentacja funkcji sk\IeC {\l }adowych}{10}{subsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3.1}get\discretionary {-}{}{}Data}{10}{subsubsection.5.2.3.1}
+\contentsline {subsubsection}{\numberline {5.2.3.2}next}{10}{subsubsection.5.2.3.2}
+\contentsline {subsubsection}{\numberline {5.2.3.3}prev}{10}{subsubsection.5.2.3.3}
+\contentsline {subsubsection}{\numberline {5.2.3.4}set\discretionary {-}{}{}Data}{11}{subsubsection.5.2.3.4}
+\contentsline {subsubsection}{\numberline {5.2.3.5}set\discretionary {-}{}{}Next}{11}{subsubsection.5.2.3.5}
+\contentsline {subsubsection}{\numberline {5.2.3.6}set\discretionary {-}{}{}Prev}{11}{subsubsection.5.2.3.6}
+\contentsline {section}{\numberline {5.3}Dokumentacja szablonu klasy Array\discretionary {-}{}{}Implementation\discretionary {-}{}{}:\discretionary {-}{}{}:List$<$ T $>$}{11}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{12}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Dokumentacja konstruktora i destruktora}{12}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}List}{12}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}$\sim $\discretionary {-}{}{}List}{12}{subsubsection.5.3.2.2}
+\contentsline {subsection}{\numberline {5.3.3}Dokumentacja funkcji sk\IeC {\l }adowych}{12}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}is\discretionary {-}{}{}Empty}{12}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}pop}{12}{subsubsection.5.3.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3.3}push}{12}{subsubsection.5.3.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.4}size}{13}{subsubsection.5.3.3.4}
+\contentsline {section}{\numberline {5.4}Dokumentacja szablonu klasy List\discretionary {-}{}{}Implementation\discretionary {-}{}{}:\discretionary {-}{}{}:List$<$ T $>$}{13}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{13}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Dokumentacja konstruktora i destruktora}{14}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}$\sim $\discretionary {-}{}{}List}{14}{subsubsection.5.4.2.1}
+\contentsline {subsection}{\numberline {5.4.3}Dokumentacja funkcji sk\IeC {\l }adowych}{14}{subsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.3.1}is\discretionary {-}{}{}Empty}{14}{subsubsection.5.4.3.1}
+\contentsline {subsubsection}{\numberline {5.4.3.2}pop}{14}{subsubsection.5.4.3.2}
+\contentsline {subsubsection}{\numberline {5.4.3.3}push}{14}{subsubsection.5.4.3.3}
+\contentsline {subsubsection}{\numberline {5.4.3.4}size}{14}{subsubsection.5.4.3.4}
+\contentsline {section}{\numberline {5.5}Dokumentacja szablonu klasy Array\discretionary {-}{}{}Implementation\discretionary {-}{}{}:\discretionary {-}{}{}:Queue$<$ T $>$}{14}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{15}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Dokumentacja konstruktora i destruktora}{15}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}Queue}{15}{subsubsection.5.5.2.1}
+\contentsline {subsection}{\numberline {5.5.3}Dokumentacja funkcji sk\IeC {\l }adowych}{15}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}pop}{15}{subsubsection.5.5.3.1}
+\contentsline {subsubsection}{\numberline {5.5.3.2}push}{15}{subsubsection.5.5.3.2}
+\contentsline {section}{\numberline {5.6}Dokumentacja szablonu klasy List\discretionary {-}{}{}Implementation\discretionary {-}{}{}:\discretionary {-}{}{}:Queue$<$ T $>$}{16}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{16}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Dokumentacja funkcji sk\IeC {\l }adowych}{16}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}pop}{16}{subsubsection.5.6.2.1}
+\contentsline {subsubsection}{\numberline {5.6.2.2}push}{16}{subsubsection.5.6.2.2}
+\contentsline {section}{\numberline {5.7}Dokumentacja szablonu klasy List\discretionary {-}{}{}Implementation\discretionary {-}{}{}:\discretionary {-}{}{}:Stack$<$ T $>$}{17}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{17}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Dokumentacja funkcji sk\IeC {\l }adowych}{17}{subsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.2.1}pop}{17}{subsubsection.5.7.2.1}
+\contentsline {subsubsection}{\numberline {5.7.2.2}push}{17}{subsubsection.5.7.2.2}
+\contentsline {section}{\numberline {5.8}Dokumentacja szablonu klasy Array\discretionary {-}{}{}Implementation\discretionary {-}{}{}:\discretionary {-}{}{}:Stack$<$ T $>$}{18}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{18}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Dokumentacja konstruktora i destruktora}{18}{subsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.2.1}Stack}{18}{subsubsection.5.8.2.1}
+\contentsline {subsection}{\numberline {5.8.3}Dokumentacja funkcji sk\IeC {\l }adowych}{18}{subsection.5.8.3}
+\contentsline {subsubsection}{\numberline {5.8.3.1}is\discretionary {-}{}{}Empty}{18}{subsubsection.5.8.3.1}
+\contentsline {subsubsection}{\numberline {5.8.3.2}pop}{19}{subsubsection.5.8.3.2}
+\contentsline {subsubsection}{\numberline {5.8.3.3}push}{19}{subsubsection.5.8.3.3}
+\contentsline {subsubsection}{\numberline {5.8.3.4}size}{19}{subsubsection.5.8.3.4}
+\contentsline {section}{\numberline {5.9}Dokumentacja klasy Timer}{19}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{19}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Dokumentacja konstruktora i destruktora}{20}{subsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.2.1}Timer}{20}{subsubsection.5.9.2.1}
+\contentsline {subsection}{\numberline {5.9.3}Dokumentacja funkcji sk\IeC {\l }adowych}{20}{subsection.5.9.3}
+\contentsline {subsubsection}{\numberline {5.9.3.1}diff\discretionary {-}{}{}Time\discretionary {-}{}{}Ms}{20}{subsubsection.5.9.3.1}
+\contentsline {subsubsection}{\numberline {5.9.3.2}start\discretionary {-}{}{}Timer}{20}{subsubsection.5.9.3.2}
+\contentsline {subsubsection}{\numberline {5.9.3.3}stop\discretionary {-}{}{}Timer}{20}{subsubsection.5.9.3.3}
+\contentsline {chapter}{\numberline {6}Dokumentacja plik\IeC {\'o}w}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Dokumentacja pliku inc/\discretionary {-}{}{}Array\discretionary {-}{}{}Implementation/\discretionary {-}{}{}List.h}{21}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{21}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Dokumentacja pliku inc/\discretionary {-}{}{}Linked\discretionary {-}{}{}List\discretionary {-}{}{}Implementation/\discretionary {-}{}{}List.h}{21}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{22}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Dokumentacja pliku inc/\discretionary {-}{}{}Array\discretionary {-}{}{}Implementation/\discretionary {-}{}{}Queue.h}{22}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{22}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Dokumentacja pliku inc/\discretionary {-}{}{}Linked\discretionary {-}{}{}List\discretionary {-}{}{}Implementation/\discretionary {-}{}{}Queue.h}{22}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{22}{subsection.6.4.1}
+\contentsline {section}{\numberline {6.5}Dokumentacja pliku inc/\discretionary {-}{}{}Array\discretionary {-}{}{}Implementation/\discretionary {-}{}{}Stack.h}{23}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{23}{subsection.6.5.1}
+\contentsline {section}{\numberline {6.6}Dokumentacja pliku inc/\discretionary {-}{}{}Linked\discretionary {-}{}{}List\discretionary {-}{}{}Implementation/\discretionary {-}{}{}Stack.h}{23}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{23}{subsection.6.6.1}
+\contentsline {section}{\numberline {6.7}Dokumentacja pliku inc/\discretionary {-}{}{}Element.h}{23}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{24}{subsection.6.7.1}
+\contentsline {section}{\numberline {6.8}Dokumentacja pliku inc/\discretionary {-}{}{}Timer.h}{24}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{24}{subsection.6.8.1}
+\contentsline {section}{\numberline {6.9}Dokumentacja pliku src/main.cpp}{24}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{24}{subsection.6.9.1}
+\contentsline {section}{\numberline {6.10}Dokumentacja pliku src/\discretionary {-}{}{}Timer.cpp}{24}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}Opis szczeg\IeC {\'o}\IeC {\l }owy}{25}{subsection.6.10.1}
+\contentsline {chapter}{Indeks}{26}{section*.31}

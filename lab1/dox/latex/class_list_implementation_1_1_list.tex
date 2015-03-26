@@ -1,0 +1,129 @@
+\hypertarget{class_list_implementation_1_1_list}{\section{Dokumentacja szablonu klasy List\-Implementation\-:\-:List$<$ T $>$}
+\label{class_list_implementation_1_1_list}\index{List\-Implementation\-::\-List$<$ T $>$@{List\-Implementation\-::\-List$<$ T $>$}}
+}
+
+
+Klasa reprezentująca podstawy konterner danych z którego korzystają inne -\/ Listę  
+
+
+
+
+{\ttfamily \#include $<$List.\-h$>$}
+
+Diagram dziedziczenia dla List\-Implementation\-:\-:List$<$ T $>$\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_list_implementation_1_1_list}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_list_implementation_1_1_list_a10d3f7ae55c6a0fecfc128adce8c780a}{\hyperlink{class_list_implementation_1_1_list_a10d3f7ae55c6a0fecfc128adce8c780a}{List} ()}\label{class_list_implementation_1_1_list_a10d3f7ae55c6a0fecfc128adce8c780a}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor zerujący pola klasy i przydzielający pamięć na \-\_\-head i \-\_\-tail. \end{DoxyCompactList}\item 
+\hyperlink{class_element}{Element}$<$ T $>$ $\ast$ \hyperlink{class_list_implementation_1_1_list_ade59f70b0f166150ad68f7c21cceb6f2}{pop} (Direction dir)
+\begin{DoxyCompactList}\small\item\em zwraca element z początku(zależy od użytej struktury danych) listy \end{DoxyCompactList}\item 
+void \hyperlink{class_list_implementation_1_1_list_a8138a1cf63d2fa78f96225871d1e2e9d}{push} (\hyperlink{class_element}{Element}$<$ T $>$ $\ast$elem, Direction dir)
+\begin{DoxyCompactList}\small\item\em dodaje element na początek/koniec(zależy od implementacji) listy \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_list_implementation_1_1_list_a4478f376ab24848ed7809c3819c31dfd}{size} ()
+\begin{DoxyCompactList}\small\item\em zwraca rozmiar użytej struktury danych \end{DoxyCompactList}\item 
+unsigned short \hyperlink{class_list_implementation_1_1_list_a1a886e08a6c178dfe3fc0d5285672f27}{is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em zwraca 1, gdy kontener jest pusty, 0 -\/ gdy jest już jakiś element \end{DoxyCompactList}\item 
+virtual \hyperlink{class_list_implementation_1_1_list_a6d73f9b98132a4503ffd440eb8ae2afd}{$\sim$\-List} ()
+\begin{DoxyCompactList}\small\item\em wirtualny destruktor czyszczący liste \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\subsubsection*{template$<$class T$>$class List\-Implementation\-::\-List$<$ T $>$}
+
+Klasa reprezentująca podstawy konterner danych z którego korzystają inne -\/ Listę 
+
+Klasa reprezentująca podstawy kontener -\/ listę. Jest to podstawowa implementacja listy stanowiąca klase bazową dla listy, stosu i kolejki 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_list_implementation_1_1_list_a6d73f9b98132a4503ffd440eb8ae2afd}{\index{List\-Implementation\-::\-List@{List\-Implementation\-::\-List}!$\sim$\-List@{$\sim$\-List}}
+\index{$\sim$\-List@{$\sim$\-List}!ListImplementation::List@{List\-Implementation\-::\-List}}
+\subsubsection[{$\sim$\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf List\-Implementation\-::\-List}$<$ T $>$\-::$\sim${\bf List} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_list_implementation_1_1_list_a6d73f9b98132a4503ffd440eb8ae2afd}
+
+
+wirtualny destruktor czyszczący liste 
+
+Destruktor usuwawa wszystkie elementy z listy 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_list_implementation_1_1_list_a1a886e08a6c178dfe3fc0d5285672f27}{\index{List\-Implementation\-::\-List@{List\-Implementation\-::\-List}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!ListImplementation::List@{List\-Implementation\-::\-List}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned short {\bf List\-Implementation\-::\-List}$<$ T $>$\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_list_a1a886e08a6c178dfe3fc0d5285672f27}
+
+
+zwraca 1, gdy kontener jest pusty, 0 -\/ gdy jest już jakiś element 
+
+\begin{DoxyReturn}{Zwraca}
+zwraca informacje, czy w kontenerze są już jakieś elementy 
+\end{DoxyReturn}
+\hypertarget{class_list_implementation_1_1_list_ade59f70b0f166150ad68f7c21cceb6f2}{\index{List\-Implementation\-::\-List@{List\-Implementation\-::\-List}!pop@{pop}}
+\index{pop@{pop}!ListImplementation::List@{List\-Implementation\-::\-List}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Element}$<$ T $>$ $\ast$ {\bf List\-Implementation\-::\-List}$<$ T $>$\-::pop (
+\begin{DoxyParamCaption}
+\item[{Direction}]{dir}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_list_ade59f70b0f166150ad68f7c21cceb6f2}
+
+
+zwraca element z początku(zależy od użytej struktury danych) listy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dir} & określa czy zdjąć element z początku (Front), czy z końca (Back) listy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+element będący na początku/końcu listy 
+\end{DoxyReturn}
+\hypertarget{class_list_implementation_1_1_list_a8138a1cf63d2fa78f96225871d1e2e9d}{\index{List\-Implementation\-::\-List@{List\-Implementation\-::\-List}!push@{push}}
+\index{push@{push}!ListImplementation::List@{List\-Implementation\-::\-List}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf List\-Implementation\-::\-List}$<$ T $>$\-::push (
+\begin{DoxyParamCaption}
+\item[{{\bf Element}$<$ T $>$ $\ast$}]{elem, }
+\item[{Direction}]{dir}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_list_a8138a1cf63d2fa78f96225871d1e2e9d}
+
+
+dodaje element na początek/koniec(zależy od implementacji) listy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em elem} & element umieszczany na początku/końcu listy \\
+\hline
+{\em dir} & określa czy włożyć element na początek(\-Front), na koniec (Back) listy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_list_implementation_1_1_list_a4478f376ab24848ed7809c3819c31dfd}{\index{List\-Implementation\-::\-List@{List\-Implementation\-::\-List}!size@{size}}
+\index{size@{size}!ListImplementation::List@{List\-Implementation\-::\-List}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ unsigned int {\bf List\-Implementation\-::\-List}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_list_implementation_1_1_list_a4478f376ab24848ed7809c3819c31dfd}
+
+
+zwraca rozmiar użytej struktury danych 
+
+\begin{DoxyReturn}{Zwraca}
+rozmiar użytej struktury danych 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+inc/\-Linked\-List\-Implementation/\hyperlink{_linked_list_implementation_2_list_8h}{List.\-h}\end{DoxyCompactItemize}

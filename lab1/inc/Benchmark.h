@@ -73,7 +73,7 @@ void Benchmark<T>::testList(ListImplementation::List<T>* list) {
 		delete list;
 		list = new ListImplementation::List<T>();
 	}
-	showResoults(_resoults, "Lista oparta na wskaźnikach");
+	showResoults(_resoults, "Lista powiazana");
 }
 
 template <typename T>
@@ -124,7 +124,14 @@ void Benchmark<T>::testList(ArrayImplementation::List<T>* list, ArrayImplementat
 		delete list;
 		list = new ArrayImplementation::List<T>();
 	}
-	showResoults(_resoults, "Lista oparta na tablicy");
+	std::string info = "lista oparta na tablicy ";
+	if(inc == ArrayImplementation::Double) {
+		info+="(powiekszana dwuktronie)";
+	}
+	if(inc == ArrayImplementation::Plus_1) {
+			info+="(powiekszana o 1)";
+		}
+	showResoults(_resoults, info);
 }
 
 template <typename T>
@@ -141,7 +148,14 @@ void Benchmark<T>::testQueue(ArrayImplementation::Queue<T>* queue, ArrayImplemen
 		delete queue;
 		queue = new ArrayImplementation::Queue<T>();
 	}
-	showResoults(_resoults, "Kolejka oparta na tablicy");
+	std::string info = "Kolejka oparta na tablicy ";
+	if(inc == ArrayImplementation::Double) {
+		info+="(powiekszana dwuktronie)";
+	}
+	if(inc == ArrayImplementation::Plus_1) {
+			info+="(powiekszana o 1)";
+		}
+	showResoults(_resoults, info);
 }
 
 template <typename T>
@@ -158,7 +172,14 @@ void Benchmark<T>::testStack(ArrayImplementation::Stack<T>* stack, ArrayImplemen
 		delete stack;
 		stack = new ArrayImplementation::Stack<T>();
 	}
-	showResoults(_resoults, "Stos oparta na tablicy");
+	std::string info = "Stos oparty na tablicy ";
+	if(inc == ArrayImplementation::Double) {
+		info+="(powiekszany dwuktronie)";
+	}
+	if(inc == ArrayImplementation::Plus_1) {
+			info+="(powiekszany o 1)";
+		}
+	showResoults(_resoults, info);
 }
 
 
